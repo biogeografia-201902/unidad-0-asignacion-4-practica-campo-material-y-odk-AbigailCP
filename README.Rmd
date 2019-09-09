@@ -26,7 +26,7 @@ Parecería que surje un tercero, que es el tema del efecto que pueden tener los 
 
 Utiliza las siguientes listas de control en forma de tareas, para confirmar que dispones de lo necesario para iniciar la colecta de especímenes/datos.
 
-Las parcelas asignadas a cada persona las he obtenido ejecutando el siguiente código. En la tabla de la [tarea 2](#Tarea-2.-Tus-preguntas-de-investigación-y-tus-lugares-de-muestreo), verás cu
+Las parcelas asignadas a cada persona las he obtenido ejecutando el siguiente código. En la tabla de la [tarea 2](#tarea-2-tus-preguntas-de-investigación-y-tus-lugares-de-muestreo), verás cu
 
 
 ## Tarea 1. Estudia el siguiente protocolo de recogida de datos según sea tu caso.
