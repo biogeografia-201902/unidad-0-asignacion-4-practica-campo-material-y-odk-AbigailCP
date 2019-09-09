@@ -21,7 +21,7 @@ Parecería que surje un tercero, que es el tema del efecto que pueden tener los 
 
 Utiliza las siguientes listas de control en forma de tareas, para confirmar que dispones de lo necesario para iniciar la colecta de especímenes/datos.
 
-Las parcelas asignadas a cada persona las he obtenido ejecutando el siguiente código. En la tabla de la [tarea 2](#tarea-2-tus-preguntas-de-investigación-y-tus-lugares-de-muestreo), verás cu
+Las parcelas asignadas a cada persona las he obtenido ejecutando el siguiente código. En la tabla de la [tarea 2](#tarea-2-tus-lugares-de-muestreo-y-tus-preguntas-de-investigación), podrás consultar las asignadas a ti.
 
 Tarea 1. Estudia el siguiente protocolo de recogida de datos según sea tu caso.
 -------------------------------------------------------------------------------
@@ -30,10 +30,10 @@ Tarea 1. Estudia el siguiente protocolo de recogida de datos según sea tu caso.
 
 ### Nidos
 
-Tarea 2. Tus preguntas de investigación y tus lugares de muestreo
+Tarea 2. Tus lugares de muestreo y tus preguntas de investigación
 -----------------------------------------------------------------
 
-Seguramente las tienes a mano, pero te dejo a continuación las URL de los repos con sus preguntas de investigación. Toma nota también de tus lugares de muestreo asignados.
+Toma nota de tus lugares de muestreo asignados. Por otra parte, seguramente las tienes a mano, pero te incluyo también las URL de los repos con tus preguntas de investigación.
 
 -   -   -   
 
