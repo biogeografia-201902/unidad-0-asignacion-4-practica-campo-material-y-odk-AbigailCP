@@ -28,6 +28,11 @@ Utiliza las siguientes listas de control en forma de tareas, para confirmar que 
 
 Las parcelas asignadas a cada persona las he obtenido ejecutando el siguiente código. En la tabla de la [tarea 2](#tarea-2-tus-lugares-de-muestreo-y-tus-preguntas-de-investigación), podrás consultar las asignadas a ti.
 
+```{r}
+
+```
+
+
 
 ## Tarea 1. Estudia el siguiente protocolo de recogida de datos según sea tu caso.
 
@@ -56,7 +61,7 @@ Toma nota de tus lugares de muestreo asignados. Por otra parte, seguramente las 
 * Alcohol etílico al 70-80%
 * Pincel
 * Cebo (variará según tu pregunta de investigación)
-* Dispositivo Android + ODK Collect + Formularios descargado). Alternativamente, formularios en papel
+* Dispositivo Android + ODK Collect + Formularios descargados). Alternativamente, formularios en papel
 
 
 ## Tarea final. Ajusta tus expectativas

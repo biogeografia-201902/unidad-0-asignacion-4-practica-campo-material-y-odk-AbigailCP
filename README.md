@@ -51,7 +51,7 @@ Tarea 4. Revisa tu material de campo
 -   Alcohol etílico al 70-80%
 -   Pincel
 -   Cebo (variará según tu pregunta de investigación)
--   Dispositivo Android + ODK Collect + Formularios descargado). Alternativamente, formularios en papel
+-   Dispositivo Android + ODK Collect + Formularios descargados). Alternativamente, formularios en papel
 
 Tarea final. Ajusta tus expectativas
 ------------------------------------
