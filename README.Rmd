@@ -12,7 +12,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 >Los viajes de campo nos ayudan a ratificar que sabemos poco o nada acerca de la naturaleza
 
-No deberían existir obstáculos para salir al campo porque, a fin de cuentas, es allí donde podemos recoger datos y donde nos surgirán nuevas preguntas. Normalmente, durante una fase de exploración, los planes son inútiles, incluso molestos. Pero cuando se trata de responder preguntas concretas, entonces hay que añadir una capa de planificación, que incluya preguntas de investigación y diseño de muestreo, preferiblemente con un enfoque de reproducibilidad (ejem, luego los administrativos te dirán que es más importante hacer 20 solicitudes de cheques, escribir 30 oficios y 10 informes, buscar 50 cotizaciones y cualquier otra vaina con tal de que no viajes; corre por tu vida en el momento que veas más papeles que datos). Este repo aspira a cumplir dicha misión de asesorarte con un mínimo de planificación en tu recogida de datos, reconociendo en todo caso que se trata de un "trabajo en desarrollo".
+No deberían existir obstáculos para salir al campo porque, a fin de cuentas, es allí donde podemos recoger datos y donde nos surgirán nuevas preguntas. Normalmente, durante una fase de exploración, los planes son inútiles, incluso molestos.
+
+Sin embargo, cuando se trata de responder preguntas concretas, entonces hay que añadir una capa de planificación, que incluya preguntas de investigación y diseño de muestreo, preferiblemente con un enfoque de reproducibilidad (Buej! luego los administrativos te dirán que es más importante hacer 20 solicitudes de cheques, escribir 30 oficios y 10 informes, buscar 50 cotizaciones y cualquier otra vaina con tal de que no viajes; corre por tu vida en el momento que veas más papeles que datos).
+
+Este repo aspira a cumplir con la misión de asesorarte mínimamente a planificar tu recogida de datos, reconociendo en todo caso que tanto el repo como la propia colecta de hormigas/datos son "trabajos en desarrollo".
 
 ## Enfoques
 
@@ -20,15 +24,15 @@ Basado en las preguntas de cada estudiante, se puede asumir que hay al menos dos
 
 ### Relación con el hábitat
 
-Varias personas plantearon preguntas sobre la posible variación en la composición de las comunidades de hormigas respecto de hábitats. No tenemos mucha información ambiental sobre los hábitats, más allá de la cobertura estimada a partir de imágenes de satélite. Información ambiental adicional podrá colectarse por cada estudiante en el terreno, mediante los múltiples campos disponibles para ello en los formularios de ODK.
+Varias personas plantearon preguntas sobre la posible variación en la composición de las comunidades de hormigas respecto de los hábitats del campus de la UASD. No disponemos de mucha información ambiental públicamente accesible sobre los hábitats, más allá de la cobertura estimada a partir de imágenes de satélite. Información ambiental adicional podrá colectarse por cada estudiante en el terreno, mediante los múltiples campos disponibles para ello en los formularios de ODK.
 
 ### Nidos
 
-
+Surgió esta interesante propuesta de estudiar hormigueros. Si a esto se le añade un componente espacial, se podría obtener información interesante sobre patrones espaciales. La única complejidad en este caso consiste en tener que censar, con coordenadas y toma de muestras, cada hormiguero en las parcelas asignadas.
 
 ### ¿Acaso hay un tercer enfoque relacionado con cebos?
 
-Parecería que surje un tercero, que es el tema del efecto que pueden tener los cebos en las muestras. Sin embargo, no encontré mucha "fuerza" en las preguntas formuladas sobre este tema, y pienso que se pueden agrupar en el enfoque "relación con el hábitat".
+Parecería que surje un tercero, que es el tema del efecto que pueden tener los diferentes cebos en la preferencia según especies. Sin embargo, no encontré mucha "fuerza" en las preguntas formuladas sobre este tema, y pienso que se pueden agrupar en el enfoque "relación con el hábitat".
 
 ## Enfoques de trabajo y coberturas
 
