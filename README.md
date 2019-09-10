@@ -110,7 +110,7 @@ df[df$usuario=='yanderlin','enfoque'] <- 'relación con el hábitat'
 Parcelas asignadas
 ------------------
 
-A continuación, la tabla por personas, según tipos de coberturas y enfoques
+A continuación, la tabla por personas, según tipos de coberturas y enfoques (lee a continuación de la tabla para consultar las parcelas que te tocaron).
 
 ``` r
 kable(df)
@@ -390,7 +390,7 @@ relación con el hábitat
 </table>
  
 
-La función `parcelalea` elige, aleatoriamente, un número de parcelas dentro de los tipos de coberturas asignadas a cada persona. Cada persona dispondrá de más parcelas para elegir que las que les toca muestrear. Así, si en el terreno se presentaran problemas que impidiesen ejecutar el muestreo en una parcela dada, se podrá elegir otra alternativamente.
+A continuación verás la relación de parcelas asignadas por persona. La función `parcelalea` elige, aleatoriamente, un número de parcelas dentro de los tipos de coberturas asignadas. Cada persona dispondrá de más parcelas para elegir que las que les toca muestrear. Así, si en el terreno se presentaran problemas que impidiesen ejecutar el muestreo en una parcela dada, se podrá elegir otra alternativamente.
 
 ### BidelkisCastillo. **Relación con el hábitat**
 
@@ -838,37 +838,36 @@ Tarea 1. Estudia el siguiente protocolo de recogida de datos según sea tu caso.
 
 ### Relación con hábitat
 
+Si trabajas según el enfoque "relación con el hábitat", usarás cebos como método de muestreo por razones logística. En el terreno, coloca tus cebos en el tipo de cobertura que corresponda dentro de la parcela. Pongo un ejemplo: BidelkisCastillo debe elegir una parcela, dentro de la cobertura "construido, acerado, etc.". Supongamos que elige la parcela 53, que tiene mayoritariamente dicha "cobertura", pero también tiene algunos (pocos) árboles y algo de edificaciones erguidas (que no es lo mismo que el acerado o el pavimento). BidelkisCastillo debe colocar sus cebos en algún lugar con acerado o pavimento, pero no bajo dosel, no dentro de edificaciones ni sobre suelo (con o sin herbáceas). Si por alguna razón la cobertura predominante no está en la parcela (porque haya cambiado, por error de cartografía, o simplemente porque se hace imposible por otras razones), debe elegirse, de la lista de parcelas asignadas, otra que caracterice correctamente a dicha cobertura.
+
 ### Nidos
 
-Tarea 2. Tus lugares de muestreo y tus preguntas de investigación
------------------------------------------------------------------
+Si trabajas con "nidos", deberás hacer un censo lo más detallado posible de éstos en cada parcela, pero sólo en el tipo predominante de cobertura que corresponda. Pongo un ejemplo: dahianagb07 debe elegir una parcela dentro de la cobertura "suelo, herbáceas...". Supongamos que elige la parcela 10, donde está parte del *play*. dahianagb07 debe censar todos los nidos sobre suelo, pero no sobre pavimento ni acerado, ni dentro de edificaciones. Al igual que en el caso anterior, si por alguna razón la cobertura predominante no está en la parcela, debe elegirse, de la lista de parcelas asignadas, otra que caracterice correctamente a dicha cobertura.
 
-Toma nota de tus lugares de muestreo asignados. Por otra parte, seguramente las tienes a mano, pero te incluyo también las URL de los repos con tus preguntas de investigación.
+Deberás tomar las coordenadas en cada caso, una mínima información ambiental, y colectarás de cinco a diez obreras en cada nido (preferiblemente de diferentes castas).
 
--   -   -   
-
-Tarea 3. Tu formulario de campo
+Tarea 2. Tu formulario de campo
 -------------------------------
 
 ### Formulario de campo para relación con hábitat (A)
 
 ### Formulario de campo para estudio de nidos (B)
 
-Tarea 4. Revisa tu material de campo
+Tarea 3. Revisa tu material de campo
 ------------------------------------
 
 -   Frascos, mínimo 10, pero dependerá mucho de tus preguntas de investigación.
 -   Alcohol etílico al 70-80%
 -   Pincel
 -   Cebo (variará según tu pregunta de investigación)
--   Dispositivo Android + ODK Collect + Formularios descargados). Alternativamente, formularios en papel
+-   Dispositivo Android + ODK Collect + Formularios descargados). Alternativamente, puedes usar formularios en papel
 
 Tarea final. Ajusta tus expectativas
 ------------------------------------
 
 Es probable que, aun teniendo unas preguntas de investigación debidamente formuladas y un diseño de muestreo acorde a lo que quieres responder, te encuentres al final de los análisis con lo que a veces se denomina resultados negativos. Significa que podrías no encontrar un efecto, un patrón, y lo importante es que debes interpretarlo adecuadamente. Considera lo siguiente:
 
--   En primer lugar, considera que tu muestra es pequeña. La idea no es que hagas un completo estudio sobre hormigas, sino que ensayes técnicas de formulación de preguntas, y de recogida y análisis de datos, pensando en aplicarlo a algo más grande en el futuro. Tu tesis será un buen terreno para poner en práctica estas técnicas.
+-   En primer lugar, no olvides que tu muestra es pequeña. La idea no es que hagas un completo estudio sobre hormigas, sino que ensayes técnicas de formulación de preguntas, y de recogida y análisis de datos, pensando en aplicarlo a algo más grande en el futuro. Tu tesis será un buen terreno para poner en práctica estas técnicas.
 
 -   En segundo lugar, con independencia de que la muestra será pequeña, un resultado negativo es también un resultado, porque responde a unas preguntas y probablemente abre otras.
 
