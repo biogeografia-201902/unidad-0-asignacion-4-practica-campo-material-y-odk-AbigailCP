@@ -601,6 +601,8 @@ Elegir al menos 5 de éstas: 43, 50, 54, 93, 98, 113, 132, 150, 174
 </tr>
 </tbody>
 </table>
+ 
+
 Tarea 1. Estudia el siguiente protocolo de recogida de datos según sea tu caso.
 -------------------------------------------------------------------------------
 

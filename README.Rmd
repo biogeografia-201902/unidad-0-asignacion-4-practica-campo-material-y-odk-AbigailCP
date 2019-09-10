@@ -224,6 +224,7 @@ parcelalea(
   semilla = df[df$usuario==x,'semilla']
 )
 ```
+&nbsp;
 
 ## Tarea 1. Estudia el siguiente protocolo de recogida de datos según sea tu caso.
 
