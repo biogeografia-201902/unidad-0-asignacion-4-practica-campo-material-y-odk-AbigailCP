@@ -44,12 +44,13 @@ Utiliza las siguientes listas de control en forma de tareas, para confirmar que 
 
 Las parcelas asignadas a cada persona las obtuve ejecutando el código que verás a continuación.
 
-Primero creé una función para asignar las parcelas, que puedes consultar en el siguiente *script*. La asignación se realiza siguiendo un muestreo estratificado-aleatorio.
+Creé una función para asignar las parcelas, que puedes consultar en [este siguiente *script*](parcelalea.R). La asignación se realiza siguiendo un muestreo estratificado-aleatorio. La siguiente línea de código carga la función `parcelalea` a la memoria para su uso posterior.
+
 ```{r}
 source('parcelalea.R')
 ```
 
-A continuación cargué el archivo de parcelas 50x50 del campus UASD, definí tipos de cobertura por persona y le pedí a la función `parcelalea` que seleccionara, aleatoriamente, un número de parcelas dentro de los tipos de coberturas asignadas a cada persona:
+A continuación verás que cargo a memoria el archivo de parcelas 50x50 del campus UASD clasificadas de acuerdo a su cobertura predominante.
 
 ```{r, warning=F, message=F}
 library(sf)
@@ -59,9 +60,11 @@ parcelas_uasd <- st_read('c50mpctgrp_para_googlemaps.gpkg')
 ```
 ![](mapa_quadrats.png)
 
->[Aquí](https://drive.google.com/open?id=171pW12jdkDwmzJuwjocoVjnC7ns&usp=sharing) alojé el mapa estilizado que ves arriba, el cual puedes consultar desde cualquier PC con conexión a Internet y también usarlo en el campo con el teléfono. Puedes descargarlo desde GoogleMaps para trabajar en el campo sin conexión a Internet.
+[Aquí](https://drive.google.com/open?id=171pW12jdkDwmzJuwjocoVjnC7ns&usp=sharing) alojé el mapa estilizado que ves arriba, el cual puedes consultar desde cualquier PC con conexión a Internet y también usarlo en el campo con el teléfono.
 
-Estos son los tipos de coberturas del campus
+Puedes descargar el archivo `.kmz` que contiene el diseño de parcelas desde [aquí](quadrats-uasd-50-x-50-m.kmz) para verlo sin conexión a Internet usando tu aplicación preferida de SIG (GIS) en una PC o en tu movil. La forma más fácil de cargarlo es mediante [GoogleEarth](https://play.google.com/store/apps/details?id=com.google.earth). Puedes usar también [OruxMaps](www.oruxmaps.com) (no está disponible en la tienda de aplicaciones), o cualquier disponible en la tienda de aplicaciones que permita cargar archivos `.kmz`.
+
+El siguiente trozo de código define qué tipos de coberturas tocan a cada persona visitar. Estos fueron definidos en función en función de las preguntas de investigación.
 
 ```{r, warning=F, message=F}
 unique(parcelas_uasd$nombre)
@@ -106,6 +109,8 @@ sapply(
   }
 )
 ```
+
+Finalmente, la función `parcelalea` elige, aleatoriamente, un número de parcelas dentro de los tipos de coberturas asignadas a cada persona. Cada persona dispondrá de más parcelas para elegir que las que les toca muestrear. Así, si en el terreno se presentaran problemas que impidiesen ejecutar el muestreo en una parcela dada, se podrá elegir otra alternativamente.
 
 ### BidelkisCastillo. **Relación con el hábitat**
 ```{r}
