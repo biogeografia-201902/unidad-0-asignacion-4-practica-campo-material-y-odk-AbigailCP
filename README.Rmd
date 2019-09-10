@@ -115,7 +115,7 @@ sapply(
 )
 ```
 
-## Parcelas asignadas
+## Coberturas y parcelas asignadas
 
 El siguiente bloque muestra la tabla por personas, según tipos de coberturas y enfoques (lee a continuación de la tabla para consultar las parcelas que te tocaron).
 
@@ -246,15 +246,43 @@ parcelalea(
 ```
 &nbsp;
 
-Utiliza las siguientes listas de control en forma de tareas, para confirmar que dispones de lo necesario para iniciar la colecta de especímenes/datos.
+Utiliza las siguientes tareas a modo de listas de "chequeo". Confirma que dispones de lo necesario para iniciar la colecta de especímenes/datos.
 
-## Tarea 1. Estudia el siguiente protocolo de recogida de datos según sea tu caso.
+## Tarea 1. Descarga y prueba tu formulario de campo de ODK
+
+**EXTREMADAMENTE IMPORTANTE. Si conservas aún el formulario que descargaste en el aula, bórralo, porque colectarás con uno ligeramente modificado. El servidor no admite remisiones del formulario anterior.**
+
+El servidor dispone de dos formularios disponibles para el trabajo de campo según el enfoque que te corresponda. El formulario del enfoque "relación con el hábitat" está almacenado bajo el nombre **"Hormigas UASD HABITAT"**. El formulario del enfoque "nidos" se denomina **"Hormigas UASD NIDOS"**. Procede de la siguiente manera:
+
+* Descárgalo. Por razones de seguridad, no puedo compartir los detalles de descarga por esta vía. Crea un *issue* o escribe a mi buzón de correo.
+
+* Prueba. Rellena un formulario ficticio. Coloca en el campo "Observaciones u otros parámetros" la palabra "PROBANDO".
+
+* Envíalo. Puedes enviarlo al servidor para comprobar que la comunicación está correcta. Notifícame, mediante un *issue*.
+
+## Tarea 3. Ejecuta el siguiente protocolo de recogida de datos según sea tu caso
 
 ### Relación con el hábitat
 
-Si trabajas según el enfoque "relación con el hábitat", usarás cebos como método de muestreo por razones logística.  En el terreno, coloca tus cebos en el tipo de cobertura que corresponda dentro de la parcela. Pongo un ejemplo: BidelkisCastillo debe elegir una parcela, dentro de la cobertura "construido, acerado, etc.". Supongamos que elige la parcela 53, que tiene mayoritariamente dicha "cobertura", pero también tiene algunos (pocos) árboles y algo de edificaciones erguidas (que no es lo mismo que el acerado o el pavimento). BidelkisCastillo debe colocar sus cebos en algún lugar con acerado o pavimento, pero no bajo dosel, no dentro de edificaciones ni sobre suelo (con o sin herbáceas). Si por alguna razón la cobertura predominante no está en la parcela (porque haya cambiado, por error de cartografía, o simplemente porque se hace imposible por otras razones), debe elegirse, de la lista de parcelas asignadas, otra que caracterice correctamente a dicha cobertura.
+Este protocolo se realiza de forma más eficiente por dos personas.
 
-En el enfoque "relación con el hábitat", colectarás las hormigas procedentes de los cebos. Dado que tendrás que muestrear 11 parcelas, cada parcela es un 
+Si trabajas según el enfoque "relación con el hábitat", usarás cebos como método de muestreo por razones logísticas. Inicia el trabajo abriendo tu formulario de campo ODK **"Hormigas UASD HABITAT"**. Rellena todos los datos que puedas al inicio y **GUARDA FRECUENTEMENTE**.
+
+En el terreno, coloca 16 cebos separados dos metros entre sí (3-4 pasos son aproximadamente dos metros), formando un cuadrado (si son dos personas, el trabajo de rellenado de formularios y colocación de cebos se puede hacer en paralelo). Puedes colocar estacas en el terreno para marcar los vértices más importantes del cuadrado, o colocar estacas en todos los cebos.
+
+Todos los cebos de una parcela deben quedar dentro del tipo de cobertura que corresponda al caso. A continuación pongo un ejemplo sobre este particular.
+
+>Ejemplo. BidelkisCastillo debe elegir una parcela, dentro de la cobertura "construido, acerado, etc.". Supongamos que elige la parcela 53, que tiene mayoritariamente dicha "cobertura", pero también tiene algunos (pocos) árboles y edificaciones erguidas (que no es lo mismo que el acerado o el pavimento). En este ejemplo, BidelkisCastillo debe colocar sus cebos en algún lugar con acerado o pavimento dentro de la parcela (preferiblemente, y si se puede, cerca del centro), pero no bajo dosel, ni dentro de edificaciones ni sobre suelo (con o sin herbáceas). Si por alguna razón la cobertura predominante no está presente o no es dominante en la parcela (porque haya cambiado, por error de cartografía, o simplemente porque se hace imposible muestrear), debe elegirse, de la lista de parcelas asignadas, otra que caracterice correctamente a dicha cobertura.
+
+Toma la hora a la que colocaste el primer cebo y espera 30 minutos para iniciar la colecta de hormigas. Cuando se acerque el tiempo de colectar, por ejemplo, a los 25 minutos, una de las personas del equipo puede rellenar en el formulario ODK, los datos sobre "actividad en cebos", en cuatro cebos (de los 16) elegidos al azar (admite que sólo uno de los cuatro caiga en borde).
+
+Pasados 30 minutos, **colecta las hormigas de los 16 cebos de una misma parcela en un único frasco con alcohol** al 70-80% usando el pincel; puedes usar una pinza si tienes la suficiente habilidad para ello. Para colectar, visita los cebos en el mismo orden en el que los colocaste; primero se retiran las hormigas del primer cebo colocado, luego las del segundo, y así sucesivamente hasta llegar al número 16.
+
+Puedes elegir una convención para decidir cuánto colectar en cada cebo: por ejemplo, 5 minutos colectando o hasta que reúnas todos los morfotipos que puedas distinguir a simple vista. Una luz frontal puede servirte en lugares desafiantes, como por ejemplo, en áreas con grama o bajo dosel (poca luz).
+
+Dado que tendrás que muestrear 11 parcelas, al finalizar tu trabajo de campo deberás tener 11 formularios de campo y 11 frascos.
+
+
 
 ### Nidos
 
@@ -262,18 +290,6 @@ Si trabajas con "nidos", deberás hacer un censo lo más detallado posible de é
 
 Deberás tomar las coordenadas de cada nido, una mínima información ambiental, y colectarás de cinco a diez obreras en cada uno, preferiblemente de diferentes castas.
 
-
-## Tarea 2. Descarga tu formulario de campo
-
-**EXTREMADAMENTE IMPORTANTE**. Si dispones de un formulario anterior en el dispositivo, bórralo, así evitarás confusiones al momento de tomar datos en el terreno.
-
-### Formulario de campo para enfoque "relación con hábitat"
-
-**Nombre del formulario: "Hormigas UASD HÁBITAT"**
-
-### Formulario de campo para enfoque "nidos"
-
-**Nombre del formulario: "Hormigas UASD NIDOS"**
 
 ## Tarea 3. Revisa tu material de campo
 
