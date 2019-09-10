@@ -38,7 +38,7 @@ Parecería que surje un tercero, que es el tema del efecto que pueden tener los 
 
 Las parcelas asignadas a cada persona las obtuve ejecutando los trozos de código que verás a continuación, y que explico paso a paso. Si quieres saltar directamente a la lista de parcelas asignadas, presiona [aquí](#Parcelas-asignadas).
 
-Creé una función para asignar las parcelas, que puedes consultar en [este siguiente *script*](parcelalea.R). La asignación se realiza siguiendo un muestreo estratificado-aleatorio. La siguiente línea de código carga la función `parcelalea` a la memoria para su uso posterior.
+Creé una función para asignar las parcelas, que puedes consultar en [este *script*](parcelalea.R). La asignación se realiza siguiendo un muestreo estratificado-aleatorio. La siguiente línea de código carga la función `parcelalea` a la memoria para su uso posterior.
 
 ```{r}
 source('parcelalea.R')
@@ -54,11 +54,11 @@ parcelas_uasd <- st_read('c50mpctgrp_para_googlemaps.gpkg')
 ```
 ![](mapa_quadrats.png)
 
-[Aquí](https://drive.google.com/open?id=171pW12jdkDwmzJuwjocoVjnC7ns&usp=sharing) alojé el mapa estilizado que ves arriba, el cual puedes consultar con el navegador desde cualquier PC con conexión a Internet y también visualizarlo en el campo con el teléfono usando aplicaciones como Maps o el navegador propiamente.
+[Aquí](https://drive.google.com/open?id=171pW12jdkDwmzJuwjocoVjnC7ns&usp=sharing) alojé, en modo público, el mapa estilizado de GoogleMaps que ves arriba. Lo puedes consultar con el navegador desde cualquier PC con conexión a Internet, y también puedes visualizarlo en el campo con el teléfono usando aplicaciones como Maps, o incluso en el navegador de tu dispositivo.
 
-Alternativamente, puedes descargar el archivo `.kmz` que contiene el diseño de parcelas desde [aquí](quadrats-uasd-50-x-50-m.kmz). Podrás verlo sin conexión a Internet usando tu aplicación preferida de SIG (GIS) en una PC o en tu movil. La forma más fácil de cargarlo es mediante [GoogleEarth](https://play.google.com/store/apps/details?id=com.google.earth). Puedes usar también [OruxMaps](www.oruxmaps.com) (no está disponible en la tienda de aplicaciones), o cualquier otra aplicación disponible que permita cargar archivos `.kmz`.
+Alternativamente, si prevés que no dispondrás de conexión a Internet en el terreno, puedes descargar el archivo `.kmz` que contiene el diseño de parcelas desde [aquí](quadrats-uasd-50-x-50-m.kmz). Podrás verlo usando tu aplicación preferida de SIG (GIS) en tu movil (o en una tableta o PC). La forma más fácil de cargarlo es mediante [GoogleEarth](https://play.google.com/store/apps/details?id=com.google.earth). Puedes usar también [OruxMaps](www.oruxmaps.com) (no está disponible en la tienda de aplicaciones), o cualquier otra aplicación disponible que permita cargar archivos `.kmz`.
 
-El siguiente bloque de código define qué tipos de coberturas tocan a cada persona visitar. Estos fueron definidos en función en función de las preguntas de investigación.
+El siguiente bloque de código define qué tipos de coberturas deberá visitar cada persona. Estos fueron definidos en función en función de las preguntas de investigación.
 
 ```{r, warning=F, message=F}
 unique(parcelas_uasd$nombre) #Informativo, tipos de coberturas disponibles
@@ -86,7 +86,7 @@ df$semilla <- sapply(
 )
 ```
 
-A continuación, asignación de enfoques de trabajo (relación con hábitat o nidos) en función de las preguntas de investigación:
+El siguiente bloque de código asigna enfoques de trabajo ("relación con el hábitat" o "nidos") en función de las preguntas de investigación:
 
 ```{r, warning=F, message=F}
 df[df$usuario=='BidelkisCastillo','enfoque'] <- 'relación con el hábitat'
@@ -117,13 +117,14 @@ sapply(
 
 ## Parcelas asignadas
 
-A continuación, la tabla por personas, según tipos de coberturas y enfoques (lee a continuación de la tabla para consultar las parcelas que te tocaron).
+El siguiente bloque muestra la tabla por personas, según tipos de coberturas y enfoques (lee a continuación de la tabla para consultar las parcelas que te tocaron).
+
 ```{r}
 kable(df)
 ```
 &nbsp;
 
-A continuación verás la relación de parcelas asignadas por persona. La función `parcelalea` elige, aleatoriamente, un número de parcelas dentro de los tipos de coberturas asignadas. Cada persona dispondrá de más parcelas para elegir que las que les toca muestrear. Así, si en el terreno se presentaran problemas que impidiesen ejecutar el muestreo en una parcela dada, se podrá elegir otra alternativamente.
+Desde este punto verás la relación de parcelas asignadas por persona. La función `parcelalea` elige, aleatoriamente, un número de parcelas dentro de los tipos de coberturas asignadas. Cada persona dispondrá de más parcelas para elegir que las que les toca muestrear. Así, si en el terreno se presentaran problemas que impidiesen ejecutar el muestreo en una parcela dada, se podrá elegir otra alternativamente.
 
 
 ### BidelkisCastillo. **Relación con el hábitat**
@@ -249,7 +250,7 @@ Utiliza las siguientes listas de control en forma de tareas, para confirmar que 
 
 ## Tarea 1. Estudia el siguiente protocolo de recogida de datos según sea tu caso.
 
-### Relación con hábitat
+### Relación con el hábitat
 
 Si trabajas según el enfoque "relación con el hábitat", usarás cebos como método de muestreo por razones logística.  En el terreno, coloca tus cebos en el tipo de cobertura que corresponda dentro de la parcela. Pongo un ejemplo: BidelkisCastillo debe elegir una parcela, dentro de la cobertura "construido, acerado, etc.". Supongamos que elige la parcela 53, que tiene mayoritariamente dicha "cobertura", pero también tiene algunos (pocos) árboles y algo de edificaciones erguidas (que no es lo mismo que el acerado o el pavimento). BidelkisCastillo debe colocar sus cebos en algún lugar con acerado o pavimento, pero no bajo dosel, no dentro de edificaciones ni sobre suelo (con o sin herbáceas). Si por alguna razón la cobertura predominante no está en la parcela (porque haya cambiado, por error de cartografía, o simplemente porque se hace imposible por otras razones), debe elegirse, de la lista de parcelas asignadas, otra que caracterice correctamente a dicha cobertura.
 
@@ -264,9 +265,15 @@ Deberás tomar las coordenadas de cada nido, una mínima información ambiental,
 
 ## Tarea 2. Descarga tu formulario de campo
 
-### Formulario de campo para enfoque "relación con hábitat":" "Hormigas UASD HÁBITAT"
+**EXTREMADAMENTE IMPORTANTE**. Si dispones de un formulario anterior en el dispositivo, bórralo, así evitarás confusiones al momento de tomar datos en el terreno.
 
-### Formulario de campo para enfoque "nidos": "Hormigas UASD NIDOS"
+### Formulario de campo para enfoque "relación con hábitat"
+
+**Nombre del formulario: "Hormigas UASD HÁBITAT"**
+
+### Formulario de campo para enfoque "nidos"
+
+**Nombre del formulario: "Hormigas UASD NIDOS"**
 
 ## Tarea 3. Revisa tu material de campo
 
