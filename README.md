@@ -49,17 +49,13 @@ parcelas_uasd <- st_read('c50mpctgrp_para_googlemaps.gpkg')
     ## epsg (SRID):    32619
     ## proj4string:    +proj=utm +zone=19 +datum=WGS84 +units=m +no_defs
 
-``` r
-#Un mapa preliminar:
-plot(parcelas_uasd['grp'])
-```
+![](mapa_quadrats.png)
 
-![](README_files/figure-markdown_github/unnamed-chunk-2-1.png)
+> [Aquí](https://drive.google.com/open?id=171pW12jdkDwmzJuwjocoVjnC7ns&usp=sharing) alojé el mapa estilizado que ves arriba, el cual podrás usar en campo con el teléfono.
 
-> [Aquí](https://drive.google.com/open?id=171pW12jdkDwmzJuwjocoVjnC7ns&usp=sharing) alojé un mapa estilizado para uso en campo con el teléfono.
+Estos son los tipos de coberturas del campus
 
 ``` r
-#Estos son los tipos de coberturas del campus
 unique(parcelas_uasd$nombre)
 ```
 

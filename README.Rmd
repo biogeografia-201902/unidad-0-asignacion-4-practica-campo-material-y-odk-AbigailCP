@@ -56,14 +56,14 @@ library(sf)
 library(tidyverse)
 library(kableExtra)
 parcelas_uasd <- st_read('c50mpctgrp_para_googlemaps.gpkg')
-#Un mapa preliminar:
-plot(parcelas_uasd['grp'])
 ```
+![](mapa_quadrats.png)
 
->[Aquí](https://drive.google.com/open?id=171pW12jdkDwmzJuwjocoVjnC7ns&usp=sharing) alojé un mapa estilizado para uso en campo con el teléfono.
+>[Aquí](https://drive.google.com/open?id=171pW12jdkDwmzJuwjocoVjnC7ns&usp=sharing) alojé el mapa estilizado que ves arriba, el cual puedes consultar desde cualquier PC con conexión a Internet y también usarlo en el campo con el teléfono. Puedes descargarlo desde GoogleMaps para trabajar en el campo sin conexión a Internet.
+
+Estos son los tipos de coberturas del campus
 
 ```{r, warning=F, message=F}
-#Estos son los tipos de coberturas del campus
 unique(parcelas_uasd$nombre)
 estfuente <- paste0(
   'https://raw.githubusercontent.com/biogeografia-201902/',
