@@ -842,18 +842,34 @@ Utiliza las siguientes tareas a modo de listas de "chequeo". Confirma que dispon
 Tarea 1. Descarga y prueba tu formulario de campo de ODK
 --------------------------------------------------------
 
-**EXTREMADAMENTE IMPORTANTE. Si conservas aún el formulario que descargaste en el aula, bórralo, porque colectarás con uno ligeramente modificado. El servidor no admite remisiones del formulario anterior.**
+**EXTREMADAMENTE IMPORTANTE. Si conservas aún el formulario ODK que descargaste en el aula, bórralo, porque colectarás con uno ligeramente modificado. El servidor no admite remisiones del formulario anterior.**
 
-El servidor dispone de dos formularios disponibles para el trabajo de campo según el enfoque que te corresponda. El formulario del enfoque "relación con el hábitat" está almacenado bajo el nombre **"Hormigas UASD HABITAT"**. El formulario del enfoque "nidos" se denomina **"Hormigas UASD NIDOS"**. Procede de la siguiente manera:
+El servidor dispone de dos formularios ODK para el trabajo de campo según el enfoque que te corresponda. El formulario del enfoque "relación con el hábitat" está almacenado bajo el nombre **"Hormigas UASD HABITAT"**. El formulario del enfoque "nidos" se denomina **"Hormigas UASD NIDOS"**. Descarga y prueba el que te corresponda de la siguiente manera:
 
--   Descárgalo. Por razones de seguridad, no puedo compartir los detalles de descarga por esta vía. Crea un *issue* o escribe a mi buzón de correo.
+-   Instala ODK Collect desde el Play Store. Por el momento, sólo puedo ofrecer la opción de formularios electrónicos para dispositivos Android.
+
+-   Descarga el formulario que te corresponda. Por razones de seguridad, no puedo compartir los detalles de descarga por esta vía. Crea un *issue* o escribe a mi buzón de correo si necesitas los detalles.
 
 -   Prueba. Rellena un formulario ficticio. Coloca en el campo "Observaciones u otros parámetros" la palabra "PROBANDO".
 
--   Envíalo. Puedes enviarlo al servidor para comprobar que la comunicación está correcta. Notifícame, mediante un *issue*.
+-   Envía tu prueba. Puedes enviar tu prueba al servidor para comprobar que la comunicación está correcta. Notifícame, mediante un *issue*.
 
-Tarea 3. Ejecuta el siguiente protocolo de recogida de datos según sea tu caso
-------------------------------------------------------------------------------
+Tarea 2. Revisa tu material de campo
+------------------------------------
+
+-   Frascos. El número de frascos dependerá mucho del enfoque que hayas elegido.
+-   Alcohol etílico al 70-80%.
+-   Pincel.
+-   Si trabajas en el enfoque "relación con el hábitat", cebo(s)
+-   Papel vegetal o libre de ácidos.
+-   Chinógrafo.
+-   Dispositivo Android + ODK Collect + Formularios descargados). Alternativamente, puedes usar formularios en papel.
+-   Si la tienes, luz frontal.
+
+Tarea 3. Protocolo "Sal al campo"
+---------------------------------
+
+Colecta tus hormigas y tus datos de campo. Ejecuta el protocolo que corresponda según sea tu caso:
 
 ### Relación con el hábitat
 
@@ -869,31 +885,27 @@ Todos los cebos de una parcela deben quedar dentro del tipo de cobertura que cor
 
 Toma la hora a la que colocaste el primer cebo y espera 30 minutos para iniciar la colecta de hormigas. Cuando se acerque el tiempo de colectar, por ejemplo, a los 25 minutos, una de las personas del equipo puede rellenar en el formulario ODK, los datos sobre "actividad en cebos", en cuatro cebos (de los 16) elegidos al azar (admite que sólo uno de los cuatro caiga en borde).
 
-Pasados 30 minutos, **colecta las hormigas de los 16 cebos de una misma parcela en un único frasco con alcohol** al 70-80% usando el pincel; puedes usar una pinza si tienes la suficiente habilidad para ello. Para colectar, visita los cebos en el mismo orden en el que los colocaste; primero se retiran las hormigas del primer cebo colocado, luego las del segundo, y así sucesivamente hasta llegar al número 16.
+Pasados 30 minutos, **colecta las hormigas de los 16 cebos de una misma parcela en un único frasco con alcohol al 70-80% usando el pincel**; puedes usar una pinza si tienes la suficiente habilidad para ello. Para colectar, visita los cebos en el mismo orden en el que los colocaste; primero se retiran las hormigas del primer cebo colocado, luego las del segundo, y así sucesivamente hasta llegar al número 16.
 
 Puedes elegir una convención para decidir cuánto colectar en cada cebo: por ejemplo, 5 minutos colectando o hasta que reúnas todos los morfotipos que puedas distinguir a simple vista. Una luz frontal puede servirte en lugares desafiantes, como por ejemplo, en áreas con grama o bajo dosel (poca luz).
 
-Dado que tendrás que muestrear 11 parcelas, al finalizar tu trabajo de campo deberás tener 11 formularios de campo y 11 frascos.
+Al finalizar de colectar las hormigas, tapa el frasco y etiquétalo. Inserta una etiqueta en papel vegetal escrita con chinógrafo en el frasco; es preferible que escribas la etiqueta interna en papel libre ácidos, pero en todo caso el papel vegetal hará el trabajo. Adicionalmente, pega una etiqueta escrita en *masking tape* por fuera del frasco. Ambas etiquetas deben contener la misma información: código de colecta que anotaste en el formulario de ODK, fecha y hora; si te cabe, añade referencia de lugar. Termina tu formulario de ODK, guárdalo y envíalo tan pronto te sea posible.
+
+Dado que tendrás que muestrear 11 parcelas, al finalizar todo tu trabajo de campo, deberás tener 11 formularios de campo y 11 frascos, es decir, un formulario y un frasco por parcela.
 
 ### Nidos
 
-Si trabajas con "nidos", deberás hacer un censo lo más detallado posible de éstos en cada parcela, pero sólo en el tipo predominante de cobertura que corresponda. Pongo un ejemplo: dahianagb07 debe elegir una parcela dentro de la cobertura "suelo, herbáceas...". Supongamos que elige la parcela 10, donde está parte del *play*. dahianagb07 debe censar todos los nidos sobre suelo, pero no sobre pavimento ni acerado, ni dentro de edificaciones. Al igual que en el caso anterior, si por alguna razón la cobertura predominante no está en la parcela, debe elegirse, de la lista de parcelas asignadas, otra que caracterice correctamente a dicha cobertura.
+Si trabajas con "nidos", deberás hacer un censo lo más detallado posible de éstos en cada parcela. Toma datos sólo de aquellos nidos que se encuentren en el tipo predominante de cobertura que corresponda. A continuación pongo un ejemplo sobre este particular.
 
-Deberás tomar las coordenadas de cada nido, una mínima información ambiental, y colectarás de cinco a diez obreras en cada uno, preferiblemente de diferentes castas.
+> Ejemplo. dahianagb07 debe elegir una parcela dentro de la cobertura "suelo, herbáceas...". Supongamos que elige la parcela 10, donde está parte del *play* de beisbol, que es mayoritariamente suelo, pero también tiene otras "coberturas". dahianagb07 debe censar todos los nidos sobre suelo, pero no sobre pavimento ni acerado, ni dentro de edificaciones. Al igual que en el enfoque anterior, si por alguna razón la cobertura predominante no está en la parcela, debe elegirse, de la lista de parcelas asignadas, otra que caracterice correctamente a dicha cobertura.
 
-Tarea 3. Revisa tu material de campo
-------------------------------------
+Deberás tomar las coordenadas de cada nido, una mínima información ambiental, y colectarás de cinco a diez individuos en cada nido, preferiblemente de diferentes castas. Si el trabajo lo hacen dos personas, se pueden hacer tareas paralelo; por ejemplo, una persona puede rellenar el formulario y la otra colectar hormigas.
 
--   Frascos. El número de frascos dependerá mucho del enfoque que hayas elegido.
--   Alcohol etílico al 70-80%.
--   Pincel
--   Cebo si trabajas en el enfoque "relación con el hábitat".
--   Dispositivo Android + ODK Collect + Formularios descargados). Alternativamente, puedes usar formularios en papel
+**Colecta los individuos de un mismo nido en un único frasco con alcohol al 70-80% usando el pincel**. Una luz frontal puede servirte en lugares desafiantes, como por ejemplo, en áreas con grama o bajo dosel (poca luz)
 
-Tarea 4. Sal al "campo"
------------------------
+Al finalizar de colectar las hormigas, tapa el frasco y etiquétalo. Inserta una etiqueta en papel vegetal escrita con chinógrafo en el frasco; es preferible que escribas la etiqueta interna en papel libre ácidos, pero en todo caso el papel vegetal hará el trabajo. Adicionalmente, pega una etiqueta escrita en *masking tape* por fuera del frasco. Ambas etiquetas deben contener la misma información: código de colecta (en tu caso es p\#m\#, ejemplo: p1m1) que anotaste en el formulario de ODK, fecha y hora; si te cabe, añade referencia de lugar. Termina tu formulario de ODK, guárdalo y envíalo tan pronto te sea posible.
 
--   Seguridad
+Dado que tendrás que censar todos los nidos, al finalizar todo tu trabajo de campo, tendrás tantos frascos y formularios de ODK como nidos hayas censado.
 
 Tarea final. Ajusta tus expectativas
 ------------------------------------
@@ -907,5 +919,21 @@ Tarea final. Ajusta tus expectativas
 Bibliografía de referencia brevemente comentada
 -----------------------------------------------
 
+-   El trabajo de Hölldobler, Wilson, & others (1990) es una referencia obligada sobre hormigas, un manual con todos los detalles.
+
+-   El Protocolo ALL, para hormigas que habitan en la hojarasca, está bien descrito en Agosti & Alonso (2000). Contiene información sobre métodos de colecta muy variados, no sólo el método Winkler.
+
+-   Este trabajo de Lubertazzi (2019) resume de manera ejemplar la diversidad de hormigas de La Española
+
+-   La [página web *Ants of Hispaniola*, de AntWiki](https://www.antwiki.org/wiki/Ants_of_Hispaniola), será de obligada consulta para identificar especímenes
+
+Artículos: JBN-PMN, LaPolla hormiga Paleoceno, Kaspari factores abundancia, Detroit, Azteca-Cecropia, Cecropia peltata caribe, Pseudomyrmex Acacia Janzen, Reinas se quedan obreras salen ante enfermedad, Thaumatomyrmex, Ochroma,
+
 Referencias
 -----------
+
+Agosti, D., & Alonso, L. E. (2000). The all protocol. *ANTS: Standard Methods for Measuring and Monitoring Biodiversity. Smithsonian Institution Press, Washington DC*, 204–206.
+
+Hölldobler, B., Wilson, E. O., & others. (1990). *The ants*. Harvard University Press.
+
+Lubertazzi, D. (2019). THE ants of hispaniola. *Bulletin of the Museum of Comparative Zoology*, *162*(2), 59–210.
