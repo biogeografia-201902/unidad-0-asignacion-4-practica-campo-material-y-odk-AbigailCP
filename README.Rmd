@@ -1,12 +1,22 @@
 ---
 output: github_document
+bibliography: biblio.bib
+csl: apa.csl
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+str_break = function(x, width = 80L) {
+  n = nchar(x)
+  if (n <= width) return(x)
+  n1 = seq(1L, n, by = width)
+  n2 = seq(width, n, by = width)
+  if (n %% width != 0) n2 = c(n2, n)
+  substring(x, n1, n2)
+}
 ```
 
-# Práctica de campo
+# Guía de referencia para la práctica de campo
 
 >Los viajes de campo nos ayudan a ratificar que sabemos poco o nada acerca de la naturaleza
 
@@ -44,6 +54,7 @@ A continuación cargué el archivo de parcelas 50x50 del campus UASD, definí ti
 ```{r, warning=F, message=F}
 library(sf)
 library(tidyverse)
+library(kableExtra)
 parcelas_uasd <- st_read('c50mpctgrp_para_googlemaps.gpkg')
 #Un mapa preliminar:
 plot(parcelas_uasd['grp'])
@@ -97,8 +108,7 @@ sapply(
 ```
 
 ### BidelkisCastillo. **Relación con el hábitat**
->Utiliza las barras horizontales para ver tus parcelas
-```{r, tidy=T}
+```{r}
 x <- 'BidelkisCastillo'
 parcelalea(
   estudiante = x,
@@ -108,7 +118,6 @@ parcelalea(
 ```
 
 ### dahianagb07. **Nidos**
->Utiliza las barras horizontales para ver tus parcelas
 ```{r}
 x <- 'dahianagb07'
 parcelalea(
@@ -119,7 +128,6 @@ parcelalea(
 ```
 
 ### emdilone. **Relación con el hábitat**
->Utiliza las barras horizontales para ver tus parcelas
 ```{r}
 x <- 'emdilone'
 parcelalea(
@@ -130,15 +138,25 @@ parcelalea(
 ```
 
 ### enrique193. **Nidos**. Muestreo por conveniencia
->Utiliza las barras horizontales para ver tus parcelas
 ```{r}
 x <- 'enrique193'
-print('Usuario/a enrique193, elegir al menos 6 de las siguientes parcelas "próximas a sitios de comida": 10, 18, 21, 22, 42, 50, 51, 79, 166, 167, 151, ')
-print('Usuario/a enrique193, elegir al menos 5 de las siguientes parcelas "alejadas de sitios de comida": 68, 77, 81, 86, 109, 159, 170')
+enrtiposcob <- c(
+  'próximas a sitios de comida',
+  'alejadas de sitios de comida'
+)
+enrparcelas <- c(
+  paste('Elegir al menos 6 de éstas:', paste(c(10, 18, 21, 22, 42, 50, 51, 79, 166, 167, 151), collapse = ', ')),
+  paste('Elegir al menos 5 de éstas:', paste(c(68, 77, 81, 86, 109, 159, 170), collapse = ', '))
+)
+kable(
+  data.frame(
+    `Tipo de cobertura`= enrtiposcob,
+    Parcelas = enrparcelas,
+    check.names = F)
+)
 ```
 
 ### jimenezsosa. **Relación con el hábitat**
->Utiliza las barras horizontales para ver tus parcelas
 ```{r}
 x <- 'jimenezsosa'
 parcelalea(
@@ -149,7 +167,6 @@ parcelalea(
 ```
 
 ### Jorge-Mutonen. **Relación con el hábitat**
->Utiliza las barras horizontales para ver tus parcelas
 ```{r}
 x <- 'Jorge-Mutonen'
 parcelalea(
@@ -160,7 +177,6 @@ parcelalea(
 ```
 
 ### Mangoland. **Relación con el hábitat**
->Utiliza las barras horizontales para ver tus parcelas
 ```{r}
 x <- 'Mangoland'
 parcelalea(
@@ -171,7 +187,6 @@ parcelalea(
 ```
 
 ### maritzafg. **Nidos**
->Utiliza las barras horizontales para ver tus parcelas
 ```{r}
 x <- 'maritzafg'
 parcelalea(
@@ -182,7 +197,6 @@ parcelalea(
 ```
 
 ### merali-rosario. **Relación con el hábitat**
->Utiliza las barras horizontales para ver tus parcelas
 ```{r}
 x <- 'merali-rosario'
 parcelalea(
@@ -193,7 +207,6 @@ parcelalea(
 ```
 
 ### merali-rosario. **Relación con el hábitat**
->Utiliza las barras horizontales para ver tus parcelas
 ```{r}
 x <- 'merali-rosario'
 parcelalea(
@@ -204,7 +217,6 @@ parcelalea(
 ```
 
 ### yanderlin. **Relación con el hábitat**
->Utiliza las barras horizontales para ver tus parcelas
 ```{r}
 x <- 'yanderlin'
 parcelalea(
@@ -253,3 +265,11 @@ Es probable que, aun teniendo unas preguntas de investigación debidamente formu
 * En segundo lugar, con independencia de que la muestra será pequeña, un resultado negativo es también un resultado, porque responde a unas preguntas y probablemente abre otras.
 
 * Finalmente, reconoce la limitación temporal. En 5 meses no podrás ver ni aplicar todas las técnicas biogeográficas que existen en el "mercado". Sin embargo, dispondrás de fuentes bibliográficas, nuevos recursos y nuevas herramientas para localizar soluciones a tus futuros problemas en ecología.
+
+
+## Bibliografía brevemente comentada
+
+
+
+## Referencias
+

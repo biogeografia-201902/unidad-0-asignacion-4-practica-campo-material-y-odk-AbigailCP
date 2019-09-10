@@ -1,6 +1,6 @@
 
-Práctica de campo
-=================
+Guía de referencia para la práctica de campo
+============================================
 
 > Los viajes de campo nos ayudan a ratificar que sabemos poco o nada acerca de la naturaleza
 
@@ -37,6 +37,7 @@ A continuación cargué el archivo de parcelas 50x50 del campus UASD, definí ti
 ``` r
 library(sf)
 library(tidyverse)
+library(kableExtra)
 parcelas_uasd <- st_read('c50mpctgrp_para_googlemaps.gpkg')
 ```
 
@@ -165,20 +166,46 @@ df
 
 ### BidelkisCastillo. **Relación con el hábitat**
 
-> Utiliza las barras horizontales para ver tus parcelas
-
 ``` r
-x <- "BidelkisCastillo"
-parcelalea(estudiante = x, tipos = df[df$usuario == x, "tipos"][[1]], semilla = df[df$usuario == 
-    x, "semilla"])
+x <- 'BidelkisCastillo'
+parcelalea(
+  estudiante = x,
+  tipos = df[df$usuario==x,'tipos'][[1]],
+  semilla = df[df$usuario==x,'semilla']
+)
 ```
 
-    ## Usuario/a BidelkisCastillo, de la cobertura tipo "construido, mobiliario (bordes edificios, acerado, bancos, postes...)", elegir al menos 6 de las siguientes parcelas: 3, 8, 53, 78, 95, 105, 106, 152, 169, 178, 187
-    ## Usuario/a BidelkisCastillo, de la cobertura tipo "suelo, herbáceas, no edificado ni cubierto", elegir al menos 5 de las siguientes parcelas: 16, 27, 37, 39, 40, 122, 159, 160, 182
-
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Tipo de cobertura
+</th>
+<th style="text-align:left;">
+Parcelas
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+construido, mobiliario (bordes edificios, acerado, bancos, postes...)
+</td>
+<td style="text-align:left;">
+Elegir al menos 6 de éstas: 3, 8, 53, 78, 95, 105, 106, 152, 169, 178, 187
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+suelo, herbáceas, no edificado ni cubierto
+</td>
+<td style="text-align:left;">
+Elegir al menos 5 de éstas: 16, 27, 37, 39, 40, 122, 159, 160, 182
+</td>
+</tr>
+</tbody>
+</table>
 ### dahianagb07. **Nidos**
-
-> Utiliza las barras horizontales para ver tus parcelas
 
 ``` r
 x <- 'dahianagb07'
@@ -189,12 +216,37 @@ parcelalea(
 )
 ```
 
-    ## Usuario/a dahianagb07, de la cobertura tipo "construido, mobiliario (bordes edificios, acerado, bancos, postes...)", elegir al menos 6 de las siguientes parcelas: 1, 53, 78, 89, 104, 110, 127, 130, 146, 147, 163
-    ## Usuario/a dahianagb07, de la cobertura tipo "suelo, herbáceas, no edificado ni cubierto", elegir al menos 5 de las siguientes parcelas: 10, 25, 27, 30, 38, 42, 66, 70, 143
-
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Tipo de cobertura
+</th>
+<th style="text-align:left;">
+Parcelas
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+construido, mobiliario (bordes edificios, acerado, bancos, postes...)
+</td>
+<td style="text-align:left;">
+Elegir al menos 6 de éstas: 1, 53, 78, 89, 104, 110, 127, 130, 146, 147, 163
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+suelo, herbáceas, no edificado ni cubierto
+</td>
+<td style="text-align:left;">
+Elegir al menos 5 de éstas: 10, 25, 27, 30, 38, 42, 66, 70, 143
+</td>
+</tr>
+</tbody>
+</table>
 ### emdilone. **Relación con el hábitat**
-
-> Utiliza las barras horizontales para ver tus parcelas
 
 ``` r
 x <- 'emdilone'
@@ -205,29 +257,87 @@ parcelalea(
 )
 ```
 
-    ## Usuario/a emdilone, de la cobertura tipo "suelo, herbáceas, no edificado ni cubierto", elegir al menos 6 de las siguientes parcelas: 10, 17, 28, 40, 42, 52, 107, 160, 168, 171, 182
-    ## Usuario/a emdilone, de la cobertura tipo "dosel", elegir al menos 5 de las siguientes parcelas: 24, 32, 50, 88, 97, 98, 134, 155, 174
-
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Tipo de cobertura
+</th>
+<th style="text-align:left;">
+Parcelas
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+suelo, herbáceas, no edificado ni cubierto
+</td>
+<td style="text-align:left;">
+Elegir al menos 6 de éstas: 10, 17, 28, 40, 42, 52, 107, 160, 168, 171, 182
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dosel
+</td>
+<td style="text-align:left;">
+Elegir al menos 5 de éstas: 24, 32, 50, 88, 97, 98, 134, 155, 174
+</td>
+</tr>
+</tbody>
+</table>
 ### enrique193. **Nidos**. Muestreo por conveniencia
-
-> Utiliza las barras horizontales para ver tus parcelas
 
 ``` r
 x <- 'enrique193'
-print('Usuario/a enrique193, elegir al menos 6 de las siguientes parcelas "próximas a sitios de comida": 10, 18, 21, 22, 42, 50, 51, 79, 166, 167, 151, ')
+enrtiposcob <- c(
+  'próximas a sitios de comida',
+  'alejadas de sitios de comida'
+)
+enrparcelas <- c(
+  paste('Elegir al menos 6 de éstas:', paste(c(10, 18, 21, 22, 42, 50, 51, 79, 166, 167, 151), collapse = ', ')),
+  paste('Elegir al menos 5 de éstas:', paste(c(68, 77, 81, 86, 109, 159, 170), collapse = ', '))
+)
+kable(
+  data.frame(
+    `Tipo de cobertura`= enrtiposcob,
+    Parcelas = enrparcelas,
+    check.names = F)
+)
 ```
 
-    ## [1] "Usuario/a enrique193, elegir al menos 6 de las siguientes parcelas \"próximas a sitios de comida\": 10, 18, 21, 22, 42, 50, 51, 79, 166, 167, 151, "
-
-``` r
-print('Usuario/a enrique193, elegir al menos 5 de las siguientes parcelas "alejadas de sitios de comida": 68, 77, 81, 86, 109, 159, 170')
-```
-
-    ## [1] "Usuario/a enrique193, elegir al menos 5 de las siguientes parcelas \"alejadas de sitios de comida\": 68, 77, 81, 86, 109, 159, 170"
-
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Tipo de cobertura
+</th>
+<th style="text-align:left;">
+Parcelas
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+próximas a sitios de comida
+</td>
+<td style="text-align:left;">
+Elegir al menos 6 de éstas: 10, 18, 21, 22, 42, 50, 51, 79, 166, 167, 151
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+alejadas de sitios de comida
+</td>
+<td style="text-align:left;">
+Elegir al menos 5 de éstas: 68, 77, 81, 86, 109, 159, 170
+</td>
+</tr>
+</tbody>
+</table>
 ### jimenezsosa. **Relación con el hábitat**
-
-> Utiliza las barras horizontales para ver tus parcelas
 
 ``` r
 x <- 'jimenezsosa'
@@ -238,12 +348,37 @@ parcelalea(
 )
 ```
 
-    ## Usuario/a jimenezsosa, de la cobertura tipo "construido, mobiliario (bordes edificios, acerado, bancos, postes...)", elegir al menos 6 de las siguientes parcelas: 2, 8, 9, 53, 106, 111, 128, 130, 157, 178, 187
-    ## Usuario/a jimenezsosa, de la cobertura tipo "dosel", elegir al menos 5 de las siguientes parcelas: 31, 33, 43, 88, 97, 112, 114, 164, 174
-
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Tipo de cobertura
+</th>
+<th style="text-align:left;">
+Parcelas
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+construido, mobiliario (bordes edificios, acerado, bancos, postes...)
+</td>
+<td style="text-align:left;">
+Elegir al menos 6 de éstas: 2, 8, 9, 53, 106, 111, 128, 130, 157, 178, 187
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dosel
+</td>
+<td style="text-align:left;">
+Elegir al menos 5 de éstas: 31, 33, 43, 88, 97, 112, 114, 164, 174
+</td>
+</tr>
+</tbody>
+</table>
 ### Jorge-Mutonen. **Relación con el hábitat**
-
-> Utiliza las barras horizontales para ver tus parcelas
 
 ``` r
 x <- 'Jorge-Mutonen'
@@ -254,12 +389,37 @@ parcelalea(
 )
 ```
 
-    ## Usuario/a Jorge-Mutonen, de la cobertura tipo "suelo, herbáceas, no edificado ni cubierto", elegir al menos 6 de las siguientes parcelas: 26, 27, 28, 29, 41, 64, 125, 158, 170, 171, 182
-    ## Usuario/a Jorge-Mutonen, de la cobertura tipo "dosel", elegir al menos 5 de las siguientes parcelas: 44, 49, 50, 54, 88, 98, 135, 174, 175
-
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Tipo de cobertura
+</th>
+<th style="text-align:left;">
+Parcelas
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+suelo, herbáceas, no edificado ni cubierto
+</td>
+<td style="text-align:left;">
+Elegir al menos 6 de éstas: 26, 27, 28, 29, 41, 64, 125, 158, 170, 171, 182
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dosel
+</td>
+<td style="text-align:left;">
+Elegir al menos 5 de éstas: 44, 49, 50, 54, 88, 98, 135, 174, 175
+</td>
+</tr>
+</tbody>
+</table>
 ### Mangoland. **Relación con el hábitat**
-
-> Utiliza las barras horizontales para ver tus parcelas
 
 ``` r
 x <- 'Mangoland'
@@ -270,12 +430,37 @@ parcelalea(
 )
 ```
 
-    ## Usuario/a Mangoland, de la cobertura tipo "construido, mobiliario (bordes edificios, acerado, bancos, postes...)", elegir al menos 6 de las siguientes parcelas: 3, 8, 85, 104, 106, 128, 140, 148, 156, 178, 183
-    ## Usuario/a Mangoland, de la cobertura tipo "suelo, herbáceas, no edificado ni cubierto", elegir al menos 5 de las siguientes parcelas: 16, 17, 18, 29, 40, 66, 86, 107, 122
-
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Tipo de cobertura
+</th>
+<th style="text-align:left;">
+Parcelas
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+construido, mobiliario (bordes edificios, acerado, bancos, postes...)
+</td>
+<td style="text-align:left;">
+Elegir al menos 6 de éstas: 3, 8, 85, 104, 106, 128, 140, 148, 156, 178, 183
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+suelo, herbáceas, no edificado ni cubierto
+</td>
+<td style="text-align:left;">
+Elegir al menos 5 de éstas: 16, 17, 18, 29, 40, 66, 86, 107, 122
+</td>
+</tr>
+</tbody>
+</table>
 ### maritzafg. **Nidos**
-
-> Utiliza las barras horizontales para ver tus parcelas
 
 ``` r
 x <- 'maritzafg'
@@ -286,12 +471,37 @@ parcelalea(
 )
 ```
 
-    ## Usuario/a maritzafg, de la cobertura tipo "construido, mobiliario (bordes edificios, acerado, bancos, postes...)", elegir al menos 6 de las siguientes parcelas: 53, 78, 85, 105, 106, 128, 131, 140, 157, 178, 179
-    ## Usuario/a maritzafg, de la cobertura tipo "suelo, herbáceas, no edificado ni cubierto", elegir al menos 5 de las siguientes parcelas: 25, 27, 28, 39, 66, 80, 143, 160, 168
-
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Tipo de cobertura
+</th>
+<th style="text-align:left;">
+Parcelas
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+construido, mobiliario (bordes edificios, acerado, bancos, postes...)
+</td>
+<td style="text-align:left;">
+Elegir al menos 6 de éstas: 53, 78, 85, 105, 106, 128, 131, 140, 157, 178, 179
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+suelo, herbáceas, no edificado ni cubierto
+</td>
+<td style="text-align:left;">
+Elegir al menos 5 de éstas: 25, 27, 28, 39, 66, 80, 143, 160, 168
+</td>
+</tr>
+</tbody>
+</table>
 ### merali-rosario. **Relación con el hábitat**
-
-> Utiliza las barras horizontales para ver tus parcelas
 
 ``` r
 x <- 'merali-rosario'
@@ -302,12 +512,37 @@ parcelalea(
 )
 ```
 
-    ## Usuario/a merali-rosario, de la cobertura tipo "construido, mobiliario (bordes edificios, acerado, bancos, postes...)", elegir al menos 6 de las siguientes parcelas: 2, 9, 78, 79, 89, 104, 129, 147, 152, 157, 179
-    ## Usuario/a merali-rosario, de la cobertura tipo "dosel", elegir al menos 5 de las siguientes parcelas: 24, 43, 49, 54, 133, 135, 149, 150, 164
-
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Tipo de cobertura
+</th>
+<th style="text-align:left;">
+Parcelas
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+construido, mobiliario (bordes edificios, acerado, bancos, postes...)
+</td>
+<td style="text-align:left;">
+Elegir al menos 6 de éstas: 2, 9, 78, 79, 89, 104, 129, 147, 152, 157, 179
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dosel
+</td>
+<td style="text-align:left;">
+Elegir al menos 5 de éstas: 24, 43, 49, 54, 133, 135, 149, 150, 164
+</td>
+</tr>
+</tbody>
+</table>
 ### merali-rosario. **Relación con el hábitat**
-
-> Utiliza las barras horizontales para ver tus parcelas
 
 ``` r
 x <- 'merali-rosario'
@@ -318,12 +553,37 @@ parcelalea(
 )
 ```
 
-    ## Usuario/a merali-rosario, de la cobertura tipo "construido, mobiliario (bordes edificios, acerado, bancos, postes...)", elegir al menos 6 de las siguientes parcelas: 2, 9, 78, 79, 89, 104, 129, 147, 152, 157, 179
-    ## Usuario/a merali-rosario, de la cobertura tipo "dosel", elegir al menos 5 de las siguientes parcelas: 24, 43, 49, 54, 133, 135, 149, 150, 164
-
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Tipo de cobertura
+</th>
+<th style="text-align:left;">
+Parcelas
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+construido, mobiliario (bordes edificios, acerado, bancos, postes...)
+</td>
+<td style="text-align:left;">
+Elegir al menos 6 de éstas: 2, 9, 78, 79, 89, 104, 129, 147, 152, 157, 179
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dosel
+</td>
+<td style="text-align:left;">
+Elegir al menos 5 de éstas: 24, 43, 49, 54, 133, 135, 149, 150, 164
+</td>
+</tr>
+</tbody>
+</table>
 ### yanderlin. **Relación con el hábitat**
-
-> Utiliza las barras horizontales para ver tus parcelas
 
 ``` r
 x <- 'yanderlin'
@@ -334,9 +594,36 @@ parcelalea(
 )
 ```
 
-    ## Usuario/a yanderlin, de la cobertura tipo "suelo, herbáceas, no edificado ni cubierto", elegir al menos 6 de las siguientes parcelas: 19, 26, 28, 29, 30, 42, 64, 67, 82, 159, 160
-    ## Usuario/a yanderlin, de la cobertura tipo "dosel", elegir al menos 5 de las siguientes parcelas: 43, 50, 54, 93, 98, 113, 132, 150, 174
-
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Tipo de cobertura
+</th>
+<th style="text-align:left;">
+Parcelas
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+suelo, herbáceas, no edificado ni cubierto
+</td>
+<td style="text-align:left;">
+Elegir al menos 6 de éstas: 19, 26, 28, 29, 30, 42, 64, 67, 82, 159, 160
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dosel
+</td>
+<td style="text-align:left;">
+Elegir al menos 5 de éstas: 43, 50, 54, 93, 98, 113, 132, 150, 174
+</td>
+</tr>
+</tbody>
+</table>
 Tarea 1. Estudia el siguiente protocolo de recogida de datos según sea tu caso.
 -------------------------------------------------------------------------------
 
@@ -377,3 +664,9 @@ Es probable que, aun teniendo unas preguntas de investigación debidamente formu
 -   En segundo lugar, con independencia de que la muestra será pequeña, un resultado negativo es también un resultado, porque responde a unas preguntas y probablemente abre otras.
 
 -   Finalmente, reconoce la limitación temporal. En 5 meses no podrás ver ni aplicar todas las técnicas biogeográficas que existen en el "mercado". Sin embargo, dispondrás de fuentes bibliográficas, nuevos recursos y nuevas herramientas para localizar soluciones a tus futuros problemas en ecología.
+
+Bibliografía brevemente comentada
+---------------------------------
+
+Referencias
+-----------

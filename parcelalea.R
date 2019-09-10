@@ -4,6 +4,7 @@ parcelalea <- function(
   tiposcol = 'nombre', idcol = 'layer',
   sf = parcelas_uasd, n = 20, total = 11, semilla){
   require(sf)
+  require(kableExtra)
   st_geometry(sf) <- NULL
   ntipos <- length(tipos)
   tiposcoma <- paste(tipos, collapse = ', ')
@@ -23,14 +24,15 @@ parcelalea <- function(
       }
       set.seed(semilla)
       m <- sort(sample(sffiltrado[sffiltrado[,tiposcol] %in% x, idcol], nm))
-      cat(
-        'Usuario/a ', estudiante,
-        ', de la cobertura tipo "',
-        x,
-        '", elegir al menos ', round(props*total,0),
-        ' de las siguientes parcelas: ',
-        paste(m, collapse = ', '), '\n', sep = '')
+      df <- data.frame(
+        `Tipo de cobertura`= x,
+        Parcelas=paste('Elegir al menos ', round(props*total,0), 'de éstas:' ,
+                       paste(m, collapse = ', ')
+                       ),
+        check.names = F)
+      return(df)
     }
   )
-  return(invisible(muestras))
+  muestras.df <- do.call('rbind', muestras)
+  kable(muestras.df)
 }
