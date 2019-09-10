@@ -501,7 +501,7 @@ Elegir al menos 5 de éstas: 25, 27, 28, 39, 66, 80, 143, 160, 168
 </tr>
 </tbody>
 </table>
-### merali-rosario. **Relación con el hábitat**
+  \#\#\# merali-rosario. **Relación con el hábitat**
 
 ``` r
 x <- 'merali-rosario'

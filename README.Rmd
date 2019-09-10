@@ -195,8 +195,9 @@ parcelalea(
   semilla = df[df$usuario==x,'semilla']
 )
 ```
-
+&nbsp;
 ### merali-rosario. **Relación con el hábitat**
+
 ```{r}
 x <- 'merali-rosario'
 parcelalea(
@@ -229,6 +230,7 @@ parcelalea(
 ## Tarea 1. Estudia el siguiente protocolo de recogida de datos según sea tu caso.
 
 ### Relación con hábitat
+
 
 ### Nidos
 
