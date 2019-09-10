@@ -927,8 +927,7 @@ Bibliografía de referencia brevemente comentada
 
 -   La [página web *Ants of Hispaniola*, de AntWiki](https://www.antwiki.org/wiki/Ants_of_Hispaniola), será de obligada consulta para identificar especímenes
 
-Artículos: JBN-PMN, LaPolla hormiga Paleoceno, Kaspari factores abundancia, Detroit, Azteca-Cecropia, Cecropia peltata caribe, Pseudomyrmex Acacia Janzen, Reinas se quedan obreras salen ante enfermedad, Thaumatomyrmex, Ochroma,
-
+<!-- Artículos: JBN-PMN, LaPolla hormiga Paleoceno, Kaspari factores abundancia, Detroit, Azteca-Cecropia, Cecropia peltata caribe, Pseudomyrmex Acacia Janzen, Reinas se quedan obreras salen ante enfermedad, Thaumatomyrmex, Ochroma,  -->
 Referencias
 -----------
 
