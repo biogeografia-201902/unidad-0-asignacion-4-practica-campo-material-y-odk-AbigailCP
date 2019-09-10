@@ -205,6 +205,8 @@ Elegir al menos 5 de éstas: 16, 27, 37, 39, 40, 122, 159, 160, 182
 </tr>
 </tbody>
 </table>
+ 
+
 ### dahianagb07. **Nidos**
 
 ``` r
@@ -246,6 +248,8 @@ Elegir al menos 5 de éstas: 10, 25, 27, 30, 38, 42, 66, 70, 143
 </tr>
 </tbody>
 </table>
+ 
+
 ### emdilone. **Relación con el hábitat**
 
 ``` r
@@ -287,6 +291,8 @@ Elegir al menos 5 de éstas: 24, 32, 50, 88, 97, 98, 134, 155, 174
 </tr>
 </tbody>
 </table>
+ 
+
 ### enrique193. **Nidos**. Muestreo por conveniencia
 
 ``` r
@@ -337,6 +343,8 @@ Elegir al menos 5 de éstas: 68, 77, 81, 86, 109, 159, 170
 </tr>
 </tbody>
 </table>
+ 
+
 ### jimenezsosa. **Relación con el hábitat**
 
 ``` r
@@ -378,6 +386,8 @@ Elegir al menos 5 de éstas: 31, 33, 43, 88, 97, 112, 114, 164, 174
 </tr>
 </tbody>
 </table>
+ 
+
 ### Jorge-Mutonen. **Relación con el hábitat**
 
 ``` r
@@ -419,6 +429,8 @@ Elegir al menos 5 de éstas: 44, 49, 50, 54, 88, 98, 135, 174, 175
 </tr>
 </tbody>
 </table>
+ 
+
 ### Mangoland. **Relación con el hábitat**
 
 ``` r
@@ -460,6 +472,8 @@ Elegir al menos 5 de éstas: 16, 17, 18, 29, 40, 66, 86, 107, 122
 </tr>
 </tbody>
 </table>
+ 
+
 ### maritzafg. **Nidos**
 
 ``` r
@@ -544,6 +558,8 @@ Elegir al menos 5 de éstas: 24, 43, 49, 54, 133, 135, 149, 150, 164
 </tr>
 </tbody>
 </table>
+ 
+
 ### yanderlin. **Relación con el hábitat**
 
 ``` r

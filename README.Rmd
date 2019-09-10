@@ -116,6 +116,7 @@ parcelalea(
   semilla = df[df$usuario==x,'semilla']
 )
 ```
+&nbsp;
 
 ### dahianagb07. **Nidos**
 ```{r}
@@ -126,6 +127,7 @@ parcelalea(
   semilla = df[df$usuario==x,'semilla']
 )
 ```
+&nbsp;
 
 ### emdilone. **Relación con el hábitat**
 ```{r}
@@ -136,6 +138,7 @@ parcelalea(
   semilla = df[df$usuario==x,'semilla']
 )
 ```
+&nbsp;
 
 ### enrique193. **Nidos**. Muestreo por conveniencia
 ```{r}
@@ -155,6 +158,7 @@ kable(
     check.names = F)
 )
 ```
+&nbsp;
 
 ### jimenezsosa. **Relación con el hábitat**
 ```{r}
@@ -165,6 +169,7 @@ parcelalea(
   semilla = df[df$usuario==x,'semilla']
 )
 ```
+&nbsp;
 
 ### Jorge-Mutonen. **Relación con el hábitat**
 ```{r}
@@ -175,6 +180,7 @@ parcelalea(
   semilla = df[df$usuario==x,'semilla']
 )
 ```
+&nbsp;
 
 ### Mangoland. **Relación con el hábitat**
 ```{r}
@@ -185,6 +191,7 @@ parcelalea(
   semilla = df[df$usuario==x,'semilla']
 )
 ```
+&nbsp;
 
 ### maritzafg. **Nidos**
 ```{r}
@@ -198,7 +205,6 @@ parcelalea(
 &nbsp;
 
 ### merali-rosario. **Relación con el hábitat**
-
 ```{r}
 x <- 'merali-rosario'
 parcelalea(
@@ -207,7 +213,7 @@ parcelalea(
   semilla = df[df$usuario==x,'semilla']
 )
 ```
-
+&nbsp;
 
 ### yanderlin. **Relación con el hábitat**
 ```{r}
