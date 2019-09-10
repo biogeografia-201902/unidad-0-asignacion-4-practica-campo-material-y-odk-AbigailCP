@@ -9,9 +9,11 @@ No deberían existir obstáculos para salir al campo porque, a fin de cuentas, e
 Enfoques
 --------
 
-Basado en las preguntas de cada estudiante, se puede asumir que hay al menos dos enfoques en los estudios sobre hormigas a realizar:
+Basado en las preguntas de cada estudiante, se puede asumir que hay al menos dos enfoques en los estudios a realizar sobre hormigas:
 
 ### Relación con el hábitat
+
+Varias personas plantearon preguntas sobre la posible variación en la composición de las comunidades de hormigas respecto de hábitats. No tenemos mucha información ambiental sobre los hábitats, más allá de la cobertura estimada a partir de imágenes de satélite. Información ambiental adicional podrá colectarse por cada estudiante en el terreno, mediante los múltiples campos disponibles para ello en los formularios de ODK.
 
 ### Nidos
 
@@ -19,12 +21,10 @@ Basado en las preguntas de cada estudiante, se puede asumir que hay al menos dos
 
 Parecería que surje un tercero, que es el tema del efecto que pueden tener los cebos en las muestras. Sin embargo, no encontré mucha "fuerza" en las preguntas formuladas sobre este tema, y pienso que se pueden agrupar en el enfoque "relación con el hábitat".
 
-Utiliza las siguientes listas de control en forma de tareas, para confirmar que dispones de lo necesario para iniciar la colecta de especímenes/datos.
+Enfoques de trabajo y coberturas
+--------------------------------
 
-Parcelas asignadas
-------------------
-
-Las parcelas asignadas a cada persona las obtuve ejecutando el código que verás a continuación.
+Las parcelas asignadas a cada persona las obtuve ejecutando los trozos de código que verás a continuación, y que explico paso a paso. Si quieres saltar directamente a la lista de parcelas asignadas, presiona [aquí](#Parcelas-asignadas).
 
 Creé una función para asignar las parcelas, que puedes consultar en [este siguiente *script*](parcelalea.R). La asignación se realiza siguiendo un muestreo estratificado-aleatorio. La siguiente línea de código carga la función `parcelalea` a la memoria para su uso posterior.
 
@@ -51,14 +51,14 @@ parcelas_uasd <- st_read('c50mpctgrp_para_googlemaps.gpkg')
 
 ![](mapa_quadrats.png)
 
-[Aquí](https://drive.google.com/open?id=171pW12jdkDwmzJuwjocoVjnC7ns&usp=sharing) alojé el mapa estilizado que ves arriba, el cual puedes consultar desde cualquier PC con conexión a Internet y también usarlo en el campo con el teléfono.
+[Aquí](https://drive.google.com/open?id=171pW12jdkDwmzJuwjocoVjnC7ns&usp=sharing) alojé el mapa estilizado que ves arriba, el cual puedes consultar con el navegador desde cualquier PC con conexión a Internet y también visualizarlo en el campo con el teléfono usando aplicaciones como Maps o el navegador propiamente.
 
-Puedes descargar el archivo `.kmz` que contiene el diseño de parcelas desde [aquí](quadrats-uasd-50-x-50-m.kmz) para verlo sin conexión a Internet usando tu aplicación preferida de SIG (GIS) en una PC o en tu movil. La forma más fácil de cargarlo es mediante [GoogleEarth](https://play.google.com/store/apps/details?id=com.google.earth). Puedes usar también [OruxMaps](www.oruxmaps.com) (no está disponible en la tienda de aplicaciones), o cualquier disponible en la tienda de aplicaciones que permita cargar archivos `.kmz`.
+Alternativamente, puedes descargar el archivo `.kmz` que contiene el diseño de parcelas desde [aquí](quadrats-uasd-50-x-50-m.kmz). Podrás verlo sin conexión a Internet usando tu aplicación preferida de SIG (GIS) en una PC o en tu movil. La forma más fácil de cargarlo es mediante [GoogleEarth](https://play.google.com/store/apps/details?id=com.google.earth). Puedes usar también [OruxMaps](www.oruxmaps.com) (no está disponible en la tienda de aplicaciones), o cualquier otra aplicación disponible que permita cargar archivos `.kmz`.
 
-El siguiente trozo de código define qué tipos de coberturas tocan a cada persona visitar. Estos fueron definidos en función en función de las preguntas de investigación.
+El siguiente bloque de código define qué tipos de coberturas tocan a cada persona visitar. Estos fueron definidos en función en función de las preguntas de investigación.
 
 ``` r
-unique(parcelas_uasd$nombre)
+unique(parcelas_uasd$nombre) #Informativo, tipos de coberturas disponibles
 ```
 
     ## [1] construido, mobiliario (bordes edificios, acerado, bancos, postes...)
@@ -71,98 +71,326 @@ unique(parcelas_uasd$nombre)
 estfuente <- paste0(
   'https://raw.githubusercontent.com/biogeografia-201902/',
   'miembros-y-colaboradores/master/suscripciones_github.txt'
-)
+)#Lista de estudiantes
 estudiantes <- readLines(estfuente)
 df <- data.frame(usuariogh = gsub(' .*$', '', estudiantes))
-df
-```
-
-    ##           usuariogh
-    ## 1         AbigailCP
-    ## 2  BidelkisCastillo
-    ## 3       dahianagb07
-    ## 4          emdilone
-    ## 5        enrique193
-    ## 6         Erasbel05
-    ## 7            geofis
-    ## 8   hoyodepelempito
-    ## 9       jimenezsosa
-    ## 10    Jorge-Mutonen
-    ## 11     JuanJoseGH06
-    ## 12        Mangoland
-    ## 13        maritzafg
-    ## 14   merali-rosario
-    ## 15   ramosramos1886
-    ## 16        sanchez26
-    ## 17     victorcabsid
-    ## 18        yanderlin
-
-``` r
 df[df$usuario=='BidelkisCastillo','tipos'][[1]] <- list(c('construido', 'suelo'))
 df[df$usuario=='dahianagb07','tipos'][[1]] <- list(c('construido', 'suelo'))
 df[df$usuario=='emdilone','tipos'][[1]] <- list(c('dosel', 'suelo'))
 df[df$usuario=='enrique193','tipos'][[1]] <- list(c('dosel', 'construido'))
 df[df$usuario=='jimenezsosa','tipos'][[1]] <- list(c('dosel', 'construido'))
-df[df$usuario=='Jorge-Mutonen','tipos'][[1]] <- list(c('dosel', 'construido'))
 df[df$usuario=='Jorge-Mutonen','tipos'][[1]] <- list(c('dosel', 'suelo'))
 df[df$usuario=='Mangoland','tipos'][[1]] <- list(c('construido', 'suelo'))
 df[df$usuario=='maritzafg','tipos'][[1]] <- list(c('construido', 'suelo'))
 df[df$usuario=='merali-rosario','tipos'][[1]] <- list(c('construido', 'dosel'))
 df[df$usuario=='yanderlin','tipos'][[1]] <- list(c('dosel', 'suelo'))
-df
-```
-
-    ##           usuariogh             tipos
-    ## 1         AbigailCP              NULL
-    ## 2  BidelkisCastillo construido, suelo
-    ## 3       dahianagb07 construido, suelo
-    ## 4          emdilone      dosel, suelo
-    ## 5        enrique193 dosel, construido
-    ## 6         Erasbel05              NULL
-    ## 7            geofis              NULL
-    ## 8   hoyodepelempito              NULL
-    ## 9       jimenezsosa dosel, construido
-    ## 10    Jorge-Mutonen      dosel, suelo
-    ## 11     JuanJoseGH06              NULL
-    ## 12        Mangoland construido, suelo
-    ## 13        maritzafg construido, suelo
-    ## 14   merali-rosario construido, dosel
-    ## 15   ramosramos1886              NULL
-    ## 16        sanchez26              NULL
-    ## 17     victorcabsid              NULL
-    ## 18        yanderlin      dosel, suelo
-
-``` r
 #La semilla ayuda a generar números aleatorios de forma reproducible
 df$semilla <- sapply(
   df$usuario,
   function(x)
     gsub('\\D', '', substr(digest::digest(x, algo = 'md5'), 1, 10))
 )
-df
 ```
 
-    ##           usuariogh             tipos   semilla
-    ## 1         AbigailCP              NULL   5437183
-    ## 2  BidelkisCastillo construido, suelo     43850
-    ## 3       dahianagb07 construido, suelo     60258
-    ## 4          emdilone      dosel, suelo  24920155
-    ## 5        enrique193 dosel, construido       064
-    ## 6         Erasbel05              NULL  61547643
-    ## 7            geofis              NULL   0839355
-    ## 8   hoyodepelempito              NULL       397
-    ## 9       jimenezsosa dosel, construido    383025
-    ## 10    Jorge-Mutonen      dosel, suelo     99867
-    ## 11     JuanJoseGH06              NULL    654858
-    ## 12        Mangoland construido, suelo 727149007
-    ## 13        maritzafg construido, suelo  19840786
-    ## 14   merali-rosario construido, dosel    963659
-    ## 15   ramosramos1886              NULL    956743
-    ## 16        sanchez26              NULL     80801
-    ## 17     victorcabsid              NULL    703317
-    ## 18        yanderlin      dosel, suelo   9444744
+A continuación, asignación de enfoques de trabajo (relación con hábitat o nidos) en función de las preguntas de investigación:
 
-Finalmente, la función `parcelalea` elige, aleatoriamente, un número de parcelas dentro de los tipos de coberturas asignadas a cada persona. Cada persona dispondrá de más parcelas para elegir que las que les toca muestrear. Así, si en el terreno se presentaran problemas que impidiesen ejecutar el muestreo en una parcela dada, se podrá elegir otra alternativamente.
+``` r
+df[df$usuario=='BidelkisCastillo','enfoque'] <- 'relación con el hábitat'
+df[df$usuario=='dahianagb07','enfoque'] <- 'nidos'
+df[df$usuario=='emdilone','enfoque'] <- 'relación con el hábitat'
+df[df$usuario=='enrique193','enfoque'] <- 'nidos'
+df[df$usuario=='jimenezsosa','enfoque'] <- 'relación con el hábitat'
+df[df$usuario=='Jorge-Mutonen','enfoque'] <- 'relación con el hábitat'
+df[df$usuario=='Mangoland','enfoque'] <- 'relación con el hábitat'
+df[df$usuario=='maritzafg','enfoque'] <- 'nidos'
+df[df$usuario=='merali-rosario','enfoque'] <- 'relación con el hábitat'
+df[df$usuario=='yanderlin','enfoque'] <- 'relación con el hábitat'
+```
+
+Parcelas asignadas
+------------------
+
+A continuación, la tabla por personas, según tipos de coberturas y enfoques
+
+``` r
+kable(df)
+```
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+usuariogh
+</th>
+<th style="text-align:left;">
+tipos
+</th>
+<th style="text-align:left;">
+semilla
+</th>
+<th style="text-align:left;">
+enfoque
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+AbigailCP
+</td>
+<td style="text-align:left;">
+NULL
+</td>
+<td style="text-align:left;">
+5437183
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BidelkisCastillo
+</td>
+<td style="text-align:left;">
+c("construido", "suelo")
+</td>
+<td style="text-align:left;">
+43850
+</td>
+<td style="text-align:left;">
+relación con el hábitat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dahianagb07
+</td>
+<td style="text-align:left;">
+c("construido", "suelo")
+</td>
+<td style="text-align:left;">
+60258
+</td>
+<td style="text-align:left;">
+nidos
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+emdilone
+</td>
+<td style="text-align:left;">
+c("dosel", "suelo")
+</td>
+<td style="text-align:left;">
+24920155
+</td>
+<td style="text-align:left;">
+relación con el hábitat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+enrique193
+</td>
+<td style="text-align:left;">
+c("dosel", "construido")
+</td>
+<td style="text-align:left;">
+064
+</td>
+<td style="text-align:left;">
+nidos
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Erasbel05
+</td>
+<td style="text-align:left;">
+NULL
+</td>
+<td style="text-align:left;">
+61547643
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+geofis
+</td>
+<td style="text-align:left;">
+NULL
+</td>
+<td style="text-align:left;">
+0839355
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+hoyodepelempito
+</td>
+<td style="text-align:left;">
+NULL
+</td>
+<td style="text-align:left;">
+397
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+jimenezsosa
+</td>
+<td style="text-align:left;">
+c("dosel", "construido")
+</td>
+<td style="text-align:left;">
+383025
+</td>
+<td style="text-align:left;">
+relación con el hábitat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Jorge-Mutonen
+</td>
+<td style="text-align:left;">
+c("dosel", "suelo")
+</td>
+<td style="text-align:left;">
+99867
+</td>
+<td style="text-align:left;">
+relación con el hábitat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+JuanJoseGH06
+</td>
+<td style="text-align:left;">
+NULL
+</td>
+<td style="text-align:left;">
+654858
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mangoland
+</td>
+<td style="text-align:left;">
+c("construido", "suelo")
+</td>
+<td style="text-align:left;">
+727149007
+</td>
+<td style="text-align:left;">
+relación con el hábitat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+maritzafg
+</td>
+<td style="text-align:left;">
+c("construido", "suelo")
+</td>
+<td style="text-align:left;">
+19840786
+</td>
+<td style="text-align:left;">
+nidos
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+merali-rosario
+</td>
+<td style="text-align:left;">
+c("construido", "dosel")
+</td>
+<td style="text-align:left;">
+963659
+</td>
+<td style="text-align:left;">
+relación con el hábitat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ramosramos1886
+</td>
+<td style="text-align:left;">
+NULL
+</td>
+<td style="text-align:left;">
+956743
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sanchez26
+</td>
+<td style="text-align:left;">
+NULL
+</td>
+<td style="text-align:left;">
+80801
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+victorcabsid
+</td>
+<td style="text-align:left;">
+NULL
+</td>
+<td style="text-align:left;">
+703317
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+yanderlin
+</td>
+<td style="text-align:left;">
+c("dosel", "suelo")
+</td>
+<td style="text-align:left;">
+9444744
+</td>
+<td style="text-align:left;">
+relación con el hábitat
+</td>
+</tr>
+</tbody>
+</table>
+ 
+
+La función `parcelalea` elige, aleatoriamente, un número de parcelas dentro de los tipos de coberturas asignadas a cada persona. Cada persona dispondrá de más parcelas para elegir que las que les toca muestrear. Así, si en el terreno se presentaran problemas que impidiesen ejecutar el muestreo en una parcela dada, se podrá elegir otra alternativamente.
 
 ### BidelkisCastillo. **Relación con el hábitat**
 
@@ -602,6 +830,8 @@ Elegir al menos 5 de éstas: 43, 50, 54, 93, 98, 113, 132, 150, 174
 </tbody>
 </table>
  
+
+Utiliza las siguientes listas de control en forma de tareas, para confirmar que dispones de lo necesario para iniciar la colecta de especímenes/datos.
 
 Tarea 1. Estudia el siguiente protocolo de recogida de datos según sea tu caso.
 -------------------------------------------------------------------------------

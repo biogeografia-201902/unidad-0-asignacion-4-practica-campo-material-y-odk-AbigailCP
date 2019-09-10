@@ -6,14 +6,6 @@ csl: apa.csl
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-str_break = function(x, width = 80L) {
-  n = nchar(x)
-  if (n <= width) return(x)
-  n1 = seq(1L, n, by = width)
-  n2 = seq(width, n, by = width)
-  if (n %% width != 0) n2 = c(n2, n)
-  substring(x, n1, n2)
-}
 ```
 
 # Guía de referencia para la práctica de campo
@@ -24,11 +16,11 @@ No deberían existir obstáculos para salir al campo porque, a fin de cuentas, e
 
 ## Enfoques
 
-Basado en las preguntas de cada estudiante, se puede asumir que hay al menos dos enfoques en los estudios sobre hormigas a realizar:
+Basado en las preguntas de cada estudiante, se puede asumir que hay al menos dos enfoques en los estudios a realizar sobre hormigas:
 
 ### Relación con el hábitat
 
-
+Varias personas plantearon preguntas sobre la posible variación en la composición de las comunidades de hormigas respecto de hábitats. No tenemos mucha información ambiental sobre los hábitats, más allá de la cobertura estimada a partir de imágenes de satélite. Información ambiental adicional podrá colectarse por cada estudiante en el terreno, mediante los múltiples campos disponibles para ello en los formularios de ODK.
 
 ### Nidos
 
@@ -38,11 +30,9 @@ Basado en las preguntas de cada estudiante, se puede asumir que hay al menos dos
 
 Parecería que surje un tercero, que es el tema del efecto que pueden tener los cebos en las muestras. Sin embargo, no encontré mucha "fuerza" en las preguntas formuladas sobre este tema, y pienso que se pueden agrupar en el enfoque "relación con el hábitat".
 
-Utiliza las siguientes listas de control en forma de tareas, para confirmar que dispones de lo necesario para iniciar la colecta de especímenes/datos.
+## Enfoques de trabajo y coberturas
 
-## Parcelas asignadas
-
-Las parcelas asignadas a cada persona las obtuve ejecutando el código que verás a continuación.
+Las parcelas asignadas a cada persona las obtuve ejecutando los trozos de código que verás a continuación, y que explico paso a paso. Si quieres saltar directamente a la lista de parcelas asignadas, presiona [aquí](#Parcelas-asignadas).
 
 Creé una función para asignar las parcelas, que puedes consultar en [este siguiente *script*](parcelalea.R). La asignación se realiza siguiendo un muestreo estratificado-aleatorio. La siguiente línea de código carga la función `parcelalea` a la memoria para su uso posterior.
 
@@ -60,40 +50,51 @@ parcelas_uasd <- st_read('c50mpctgrp_para_googlemaps.gpkg')
 ```
 ![](mapa_quadrats.png)
 
-[Aquí](https://drive.google.com/open?id=171pW12jdkDwmzJuwjocoVjnC7ns&usp=sharing) alojé el mapa estilizado que ves arriba, el cual puedes consultar desde cualquier PC con conexión a Internet y también usarlo en el campo con el teléfono.
+[Aquí](https://drive.google.com/open?id=171pW12jdkDwmzJuwjocoVjnC7ns&usp=sharing) alojé el mapa estilizado que ves arriba, el cual puedes consultar con el navegador desde cualquier PC con conexión a Internet y también visualizarlo en el campo con el teléfono usando aplicaciones como Maps o el navegador propiamente.
 
-Puedes descargar el archivo `.kmz` que contiene el diseño de parcelas desde [aquí](quadrats-uasd-50-x-50-m.kmz) para verlo sin conexión a Internet usando tu aplicación preferida de SIG (GIS) en una PC o en tu movil. La forma más fácil de cargarlo es mediante [GoogleEarth](https://play.google.com/store/apps/details?id=com.google.earth). Puedes usar también [OruxMaps](www.oruxmaps.com) (no está disponible en la tienda de aplicaciones), o cualquier disponible en la tienda de aplicaciones que permita cargar archivos `.kmz`.
+Alternativamente, puedes descargar el archivo `.kmz` que contiene el diseño de parcelas desde [aquí](quadrats-uasd-50-x-50-m.kmz). Podrás verlo sin conexión a Internet usando tu aplicación preferida de SIG (GIS) en una PC o en tu movil. La forma más fácil de cargarlo es mediante [GoogleEarth](https://play.google.com/store/apps/details?id=com.google.earth). Puedes usar también [OruxMaps](www.oruxmaps.com) (no está disponible en la tienda de aplicaciones), o cualquier otra aplicación disponible que permita cargar archivos `.kmz`.
 
-El siguiente trozo de código define qué tipos de coberturas tocan a cada persona visitar. Estos fueron definidos en función en función de las preguntas de investigación.
+El siguiente bloque de código define qué tipos de coberturas tocan a cada persona visitar. Estos fueron definidos en función en función de las preguntas de investigación.
 
 ```{r, warning=F, message=F}
-unique(parcelas_uasd$nombre)
+unique(parcelas_uasd$nombre) #Informativo, tipos de coberturas disponibles
 estfuente <- paste0(
   'https://raw.githubusercontent.com/biogeografia-201902/',
   'miembros-y-colaboradores/master/suscripciones_github.txt'
-)
+)#Lista de estudiantes
 estudiantes <- readLines(estfuente)
 df <- data.frame(usuariogh = gsub(' .*$', '', estudiantes))
-df
 df[df$usuario=='BidelkisCastillo','tipos'][[1]] <- list(c('construido', 'suelo'))
 df[df$usuario=='dahianagb07','tipos'][[1]] <- list(c('construido', 'suelo'))
 df[df$usuario=='emdilone','tipos'][[1]] <- list(c('dosel', 'suelo'))
 df[df$usuario=='enrique193','tipos'][[1]] <- list(c('dosel', 'construido'))
 df[df$usuario=='jimenezsosa','tipos'][[1]] <- list(c('dosel', 'construido'))
-df[df$usuario=='Jorge-Mutonen','tipos'][[1]] <- list(c('dosel', 'construido'))
 df[df$usuario=='Jorge-Mutonen','tipos'][[1]] <- list(c('dosel', 'suelo'))
 df[df$usuario=='Mangoland','tipos'][[1]] <- list(c('construido', 'suelo'))
 df[df$usuario=='maritzafg','tipos'][[1]] <- list(c('construido', 'suelo'))
 df[df$usuario=='merali-rosario','tipos'][[1]] <- list(c('construido', 'dosel'))
 df[df$usuario=='yanderlin','tipos'][[1]] <- list(c('dosel', 'suelo'))
-df
 #La semilla ayuda a generar números aleatorios de forma reproducible
 df$semilla <- sapply(
   df$usuario,
   function(x)
     gsub('\\D', '', substr(digest::digest(x, algo = 'md5'), 1, 10))
 )
-df
+```
+
+A continuación, asignación de enfoques de trabajo (relación con hábitat o nidos) en función de las preguntas de investigación:
+
+```{r, warning=F, message=F}
+df[df$usuario=='BidelkisCastillo','enfoque'] <- 'relación con el hábitat'
+df[df$usuario=='dahianagb07','enfoque'] <- 'nidos'
+df[df$usuario=='emdilone','enfoque'] <- 'relación con el hábitat'
+df[df$usuario=='enrique193','enfoque'] <- 'nidos'
+df[df$usuario=='jimenezsosa','enfoque'] <- 'relación con el hábitat'
+df[df$usuario=='Jorge-Mutonen','enfoque'] <- 'relación con el hábitat'
+df[df$usuario=='Mangoland','enfoque'] <- 'relación con el hábitat'
+df[df$usuario=='maritzafg','enfoque'] <- 'nidos'
+df[df$usuario=='merali-rosario','enfoque'] <- 'relación con el hábitat'
+df[df$usuario=='yanderlin','enfoque'] <- 'relación con el hábitat'
 ```
 
 ```{r, eval=FALSE, echo=F}
@@ -110,7 +111,15 @@ sapply(
 )
 ```
 
-Finalmente, la función `parcelalea` elige, aleatoriamente, un número de parcelas dentro de los tipos de coberturas asignadas a cada persona. Cada persona dispondrá de más parcelas para elegir que las que les toca muestrear. Así, si en el terreno se presentaran problemas que impidiesen ejecutar el muestreo en una parcela dada, se podrá elegir otra alternativamente.
+## Parcelas asignadas
+
+A continuación, la tabla por personas, según tipos de coberturas y enfoques
+```{r}
+kable(df)
+```
+&nbsp;
+
+La función `parcelalea` elige, aleatoriamente, un número de parcelas dentro de los tipos de coberturas asignadas a cada persona. Cada persona dispondrá de más parcelas para elegir que las que les toca muestrear. Así, si en el terreno se presentaran problemas que impidiesen ejecutar el muestreo en una parcela dada, se podrá elegir otra alternativamente.
 
 ### BidelkisCastillo. **Relación con el hábitat**
 ```{r}
@@ -230,6 +239,8 @@ parcelalea(
 )
 ```
 &nbsp;
+
+Utiliza las siguientes listas de control en forma de tareas, para confirmar que dispones de lo necesario para iniciar la colecta de especímenes/datos.
 
 ## Tarea 1. Estudia el siguiente protocolo de recogida de datos según sea tu caso.
 
