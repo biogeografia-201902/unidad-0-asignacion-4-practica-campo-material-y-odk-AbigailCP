@@ -196,6 +196,7 @@ parcelalea(
 )
 ```
 &nbsp;
+
 ### merali-rosario. **Relación con el hábitat**
 
 ```{r}
@@ -207,15 +208,6 @@ parcelalea(
 )
 ```
 
-### merali-rosario. **Relación con el hábitat**
-```{r}
-x <- 'merali-rosario'
-parcelalea(
-  estudiante = x,
-  tipos = df[df$usuario==x,'tipos'][[1]],
-  semilla = df[df$usuario==x,'semilla']
-)
-```
 
 ### yanderlin. **Relación con el hábitat**
 ```{r}

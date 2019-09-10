@@ -501,47 +501,8 @@ Elegir al menos 5 de éstas: 25, 27, 28, 39, 66, 80, 143, 160, 168
 </tr>
 </tbody>
 </table>
-  \#\#\# merali-rosario. **Relación con el hábitat**
+ 
 
-``` r
-x <- 'merali-rosario'
-parcelalea(
-  estudiante = x,
-  tipos = df[df$usuario==x,'tipos'][[1]],
-  semilla = df[df$usuario==x,'semilla']
-)
-```
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-Tipo de cobertura
-</th>
-<th style="text-align:left;">
-Parcelas
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-construido, mobiliario (bordes edificios, acerado, bancos, postes...)
-</td>
-<td style="text-align:left;">
-Elegir al menos 6 de éstas: 2, 9, 78, 79, 89, 104, 129, 147, 152, 157, 179
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-dosel
-</td>
-<td style="text-align:left;">
-Elegir al menos 5 de éstas: 24, 43, 49, 54, 133, 135, 149, 150, 164
-</td>
-</tr>
-</tbody>
-</table>
 ### merali-rosario. **Relación con el hábitat**
 
 ``` r
