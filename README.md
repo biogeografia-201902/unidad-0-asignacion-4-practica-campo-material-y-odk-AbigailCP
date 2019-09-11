@@ -78,6 +78,7 @@ estfuente <- paste0(
 )#Lista de estudiantes
 estudiantes <- readLines(estfuente)
 df <- data.frame(usuariogh = gsub(' .*$', '', estudiantes))
+df[df$usuario=='AbigailCP','tipos'][[1]] <- list(c('construido', 'suelo'))
 df[df$usuario=='BidelkisCastillo','tipos'][[1]] <- list(c('construido', 'suelo'))
 df[df$usuario=='dahianagb07','tipos'][[1]] <- list(c('construido', 'suelo'))
 df[df$usuario=='emdilone','tipos'][[1]] <- list(c('dosel', 'suelo'))
@@ -99,6 +100,7 @@ df$semilla <- sapply(
 El siguiente bloque de código asigna enfoques de trabajo ("relación con el hábitat" o "nidos") en función de las preguntas de investigación:
 
 ``` r
+df[df$usuario=='AbigailCP','enfoque'] <- 'relación con el hábitat'
 df[df$usuario=='BidelkisCastillo','enfoque'] <- 'relación con el hábitat'
 df[df$usuario=='dahianagb07','enfoque'] <- 'nidos'
 df[df$usuario=='emdilone','enfoque'] <- 'relación con el hábitat'
@@ -143,13 +145,13 @@ enfoque
 AbigailCP
 </td>
 <td style="text-align:left;">
-NULL
+c("construido", "suelo")
 </td>
 <td style="text-align:left;">
 5437183
 </td>
 <td style="text-align:left;">
-NA
+relación con el hábitat
 </td>
 </tr>
 <tr>
@@ -395,6 +397,49 @@ relación con el hábitat considerando preferencias por cebos
  
 
 Desde este punto verás la relación de parcelas asignadas por persona. La función `parcelalea` elige, aleatoriamente, un número de parcelas dentro de los tipos de coberturas asignadas. Cada persona dispondrá de más parcelas para elegir que las que les toca muestrear. Así, si en el terreno se presentaran problemas que impidiesen ejecutar el muestreo en una parcela dada, se podrá elegir otra alternativamente.
+
+### AbigailCP. **Relación con el hábitat**
+
+``` r
+x <- 'AbigailCP'
+parcelalea(
+  estudiante = x,
+  tipos = df[df$usuario==x,'tipos'][[1]],
+  semilla = df[df$usuario==x,'semilla']
+)
+```
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Tipo de cobertura
+</th>
+<th style="text-align:left;">
+Parcelas
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+construido, mobiliario (bordes edificios, acerado, bancos, postes...)
+</td>
+<td style="text-align:left;">
+Elegir al menos 6 de éstas: 1, 3, 5, 53, 89, 95, 103, 105, 127, 151, 187
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+suelo, herbáceas, no edificado ni cubierto
+</td>
+<td style="text-align:left;">
+Elegir al menos 5 de éstas: 10, 17, 25, 29, 37, 38, 39, 64, 159
+</td>
+</tr>
+</tbody>
+</table>
+ 
 
 ### BidelkisCastillo. **Relación con el hábitat**
 
