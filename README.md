@@ -19,13 +19,11 @@ Basado en las preguntas de cada estudiante, se puede asumir que hay al menos dos
 
 Varias personas plantearon preguntas sobre la posible variación en la composición de las comunidades de hormigas respecto de los hábitats del campus de la UASD. No disponemos de mucha información ambiental públicamente accesible sobre los hábitats, más allá de la cobertura estimada a partir de imágenes de satélite. Información ambiental adicional podrá colectarse por cada estudiante en el terreno, mediante los múltiples campos disponibles para ello en los formularios de ODK.
 
+Dentro de relación con el hábitat hay un caso particular sobre posible preferencia a distintos cebos según especies. Anidar el diseño es lo recomendado en este caso, replicando con dos cebos distintos en cada una de las coberturas asignadas. Aunque quizá supera el alcance de este curso, es importante recordar que, ante un diseño anidado, una técnica muy útil para descubrir patrones/efectos son los modelos de efecto mixto.
+
 ### Nidos
 
 Surgió esta interesante propuesta de estudiar hormigueros. Si a esto se le añade un componente espacial, se podría obtener información interesante sobre patrones espaciales. La única complejidad en este caso consiste en tener que censar, con coordenadas y toma de muestras, cada hormiguero en las parcelas asignadas.
-
-### ¿Acaso hay un tercer enfoque relacionado con cebos?
-
-Parecería que surje un tercero, que es el tema del efecto que pueden tener los diferentes cebos en la preferencia según especies. Sin embargo, no encontré mucha "fuerza" en las preguntas formuladas sobre este tema, y pienso que se pueden agrupar en el enfoque "relación con el hábitat".
 
 Enfoques de trabajo y coberturas
 --------------------------------
@@ -857,9 +855,9 @@ El servidor dispone de dos formularios ODK para el trabajo de campo según el en
 Tarea 2. Revisa tu material de campo
 ------------------------------------
 
--   Frascos. El número de frascos dependerá mucho del enfoque que hayas elegido.
+-   Frascos. El número de frascos dependerá mucho del enfoque que hayas elegido. Al campo puedes llevar un frasco mediano (preferiblmente con boca ancha), desde el cual transferirás a frascos más pequeños para conservar las muestras. Utiliza alternativas que tengas en casa siempre que puedas. Si necesitas o decides comprar frascos pequeños, adelanto que éstos no son muy habituales en nuestro país, pero hay opciones en tiendas de laboratorios. Podrías intentar conseguir [estos frascos para pequeños](https://www.ebay.com/itm/50-x-Plastic-Test-Tube-Centrifuge-Tubes-2ml-Round-Bottom-new/263634572578) (para conservar las muestras), aunque aquí normalmente son un 30% más caro que el precio que ves en la web.
 -   Alcohol etílico al 70-80%.
--   Pincel.
+-   Pincel, cerdas claras, ni dura ni blanda.
 -   Si trabajas en el enfoque "relación con el hábitat", cebo(s)
 -   Papel vegetal o libre de ácidos.
 -   Chinógrafo.
@@ -899,7 +897,7 @@ Si trabajas con "nidos", deberás hacer un censo lo más detallado posible de é
 
 > Ejemplo. dahianagb07 debe elegir una parcela dentro de la cobertura "suelo, herbáceas...". Supongamos que elige la parcela 10, donde está parte del *play* de beisbol, que es mayoritariamente suelo, pero también tiene otras "coberturas". dahianagb07 debe censar todos los nidos sobre suelo, pero no sobre pavimento ni acerado, ni dentro de edificaciones. Al igual que en el enfoque anterior, si por alguna razón la cobertura predominante no está en la parcela, debe elegirse, de la lista de parcelas asignadas, otra que caracterice correctamente a dicha cobertura.
 
-Deberás tomar las coordenadas de cada nido, una mínima información ambiental, y colectarás de cinco a diez individuos en cada nido, preferiblemente de diferentes castas. Si el trabajo lo hacen dos personas, se pueden hacer tareas paralelo; por ejemplo, una persona puede rellenar el formulario y la otra colectar hormigas.
+Deberás tomar las coordenadas de cada nido, una mínima información ambiental, y colectarás de cinco a diez individuos en cada nido preferiblemente de diferentes castas. No **las atraigas con cebo**, sólo observa la entrada y espera que salgan/entren o, en su defecto, coloca algo cerca de la entrada, puesto que en algunas especies las obreras salen a defender el hormiguero. Si el trabajo lo hacen dos personas, se pueden hacer tareas paralelo; por ejemplo, una persona puede rellenar el formulario y la otra colectar hormigas.
 
 **Colecta los individuos de un mismo nido en un único frasco con alcohol al 70-80% usando el pincel**. Una luz frontal puede servirte en lugares desafiantes, como por ejemplo, en áreas con grama o bajo dosel (poca luz)
 
@@ -927,7 +925,16 @@ Bibliografía de referencia brevemente comentada
 
 -   La [página web *Ants of Hispaniola*, de AntWiki](https://www.antwiki.org/wiki/Ants_of_Hispaniola), será de obligada consulta para identificar especímenes
 
-<!-- Artículos: JBN-PMN, LaPolla hormiga Paleoceno, Kaspari factores abundancia, Detroit, Azteca-Cecropia, Cecropia peltata caribe, Pseudomyrmex Acacia Janzen, Reinas se quedan obreras salen ante enfermedad, Thaumatomyrmex, Ochroma,  -->
+-   Algunos artículos de interés
+
+    -   Este trabajo de Uno, Cotton, & Philpott (2010) es una nítida implementación sobre cómo tomar muestras de hormigas en áreas urbanas.
+    -   Lamarre, Juin, Lapied, Le Gall, & Nakamura (2018) lograron que en un colegio (privado, todo sea dicho), los alumnos y alumnas hicieran una invesitgación entomológica.
+    -   Kaspari, Alonso, & O’Donnellkwd&gt; (2000), relación entre tres factores energéticos y abundancia de hormigas.
+    -   Tres interesantes trabajos sobre asociaciones planta-hormiga: Nelsen, Ree, & Moreau (2018), Schupp (1986) y Janzen (1966).
+    -   Lapolla & Barden (2018), un interesante hallazgo sobre fósil de hormiga en areniscas.
+
+NO OLVIDAR: DOSEL SOBRE SUELO ESTRICTAMENTE, Y EN EL CASO DE ENRIQUE LO IMPORTANTE ES LA DISTANCIA A ÁREAS DE COMIDAS
+
 Referencias
 -----------
 
@@ -935,4 +942,18 @@ Agosti, D., & Alonso, L. E. (2000). The all protocol. *ANTS: Standard Methods fo
 
 Hölldobler, B., Wilson, E. O., & others. (1990). *The ants*. Harvard University Press.
 
+Janzen, D. H. (1966). Coevolution of mutualism between ants and acacias in central america. *Evolution*, *20*(3), 249–275.
+
+Kaspari, M., Alonso, L., & O’Donnellkwd&gt;, S. (2000). Three energy variables predict ant abundance at a geographical scale. *Proceedings of the Royal Society of London. Series B: Biological Sciences*, *267*(1442), 485–489.
+
+Lamarre, G. P., Juin, Y., Lapied, E., Le Gall, P., & Nakamura, A. (2018). Using field-based entomological research to promote awareness about forest ecosystem conservation. *Nature Conservation*, *29*, 39.
+
+Lapolla, J. S., & Barden, P. (2018). A new aneuretine ant from the paleocene paskapoo formation of canada. *Acta Palaeontologica Polonica*, *63*(3), 435–440.
+
 Lubertazzi, D. (2019). THE ants of hispaniola. *Bulletin of the Museum of Comparative Zoology*, *162*(2), 59–210.
+
+Nelsen, M. P., Ree, R. H., & Moreau, C. S. (2018). Ant–plant interactions evolved through increasing interdependence. *Proceedings of the National Academy of Sciences*, *115*(48), 12253–12258.
+
+Schupp, E. W. (1986). Azteca protection of cecropia: Ant occupation benefits juvenile trees. *Oecologia*, *70*(3), 379–385.
+
+Uno, S., Cotton, J., & Philpott, S. M. (2010). Diversity, abundance, and species composition of ants in urban green spaces. *Urban Ecosystems*, *13*(4), 425–441.
