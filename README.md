@@ -108,7 +108,7 @@ df[df$usuario=='Jorge-Mutonen','enfoque'] <- 'relación con el hábitat'
 df[df$usuario=='Mangoland','enfoque'] <- 'relación con el hábitat'
 df[df$usuario=='maritzafg','enfoque'] <- 'nidos'
 df[df$usuario=='merali-rosario','enfoque'] <- 'relación con el hábitat'
-df[df$usuario=='yanderlin','enfoque'] <- 'relación con el hábitat'
+df[df$usuario=='yanderlin','enfoque'] <- 'relación con el hábitat considerando preferencias por cebos'
 ```
 
 Coberturas y parcelas asignadas
@@ -387,7 +387,7 @@ c("dosel", "suelo")
 9444744
 </td>
 <td style="text-align:left;">
-relación con el hábitat
+relación con el hábitat considerando preferencias por cebos
 </td>
 </tr>
 </tbody>
@@ -792,12 +792,13 @@ Elegir al menos 5 de éstas: 24, 43, 49, 54, 133, 135, 149, 150, 164
 </table>
  
 
-### yanderlin. **Relación con el hábitat**
+### yanderlin. **Relación con el hábitat considerando preferencias por cebos**
 
 ``` r
 x <- 'yanderlin'
 parcelalea(
   estudiante = x,
+  total = 10,
   tipos = df[df$usuario==x,'tipos'][[1]],
   semilla = df[df$usuario==x,'semilla']
 )
@@ -820,7 +821,7 @@ Parcelas
 suelo, herbáceas, no edificado ni cubierto
 </td>
 <td style="text-align:left;">
-Elegir al menos 6 de éstas: 19, 26, 28, 29, 30, 42, 64, 67, 82, 159, 160
+Elegir al menos 5 de éstas: 19, 26, 28, 29, 30, 42, 64, 67, 82, 159, 160
 </td>
 </tr>
 <tr>
@@ -840,7 +841,7 @@ Utiliza las siguientes tareas a modo de listas de "chequeo". Confirma que dispon
 Tarea 1. Descarga y prueba tu formulario de campo de ODK
 --------------------------------------------------------
 
-**EXTREMADAMENTE IMPORTANTE. Si conservas aún el formulario ODK que descargaste en el aula, bórralo, porque colectarás con uno ligeramente modificado. El servidor no admite remisiones del formulario anterior.**
+**EXTREMADAMENTE IMPORTANTE. Si conservas aún el formulario ODK que descargaste en la primera práctica de aula (denominado "Hormigas campus UASD sem 2019-02"), bórralo, porque colectarás con uno ligeramente modificado. El servidor no admite remisiones de dicho formulario antiguo**.
 
 El servidor dispone de dos formularios ODK para el trabajo de campo según el enfoque que te corresponda. El formulario del enfoque "relación con el hábitat" está almacenado bajo el nombre **"Hormigas UASD HABITAT"**. El formulario del enfoque "nidos" se denomina **"Hormigas UASD NIDOS"**. Descarga y prueba el que te corresponda de la siguiente manera:
 
@@ -871,6 +872,8 @@ Colecta tus hormigas y tus datos de campo. Ejecuta el protocolo que corresponda 
 
 ### Relación con el hábitat
 
+> Esta sección también incluye al final el protocolo para "Relación con el hábitat considerando preferencias por cebos"
+
 Este protocolo se realiza de forma más eficiente por dos personas.
 
 Si trabajas según el enfoque "relación con el hábitat", usarás cebos como método de muestreo por razones logísticas. Inicia el trabajo abriendo tu formulario de campo ODK **"Hormigas UASD HABITAT"**. Rellena todos los datos que puedas al inicio y **GUARDA FRECUENTEMENTE**.
@@ -890,6 +893,136 @@ Puedes elegir una convención para decidir cuánto colectar en cada cebo: por ej
 Al finalizar de colectar las hormigas, tapa el frasco y etiquétalo. Inserta una etiqueta en papel vegetal escrita con chinógrafo en el frasco; es preferible que escribas la etiqueta interna en papel libre ácidos, pero en todo caso el papel vegetal hará el trabajo. Adicionalmente, pega una etiqueta escrita en *masking tape* por fuera del frasco. Ambas etiquetas deben contener la misma información: código de colecta que anotaste en el formulario de ODK, fecha y hora; si te cabe, añade referencia de lugar. Termina tu formulario de ODK, guárdalo y envíalo tan pronto te sea posible.
 
 Dado que tendrás que muestrear 11 parcelas, al finalizar todo tu trabajo de campo, deberás tener 11 formularios de campo y 11 frascos, es decir, un formulario y un frasco por parcela.
+
+> **Nota sobre la cobertura dosel**: si te toca esta cobertura, debes colocar tus cebos **bajo el dosel arbóreo y sobre suelo o grama, no sobre pavimento ni acera**.
+
+En el caso particular de "relación con el hábitat considerando preferencias por cebos", se colocarán dos cuadrículas de cebos (16 estaciones cada una, 32 en total) por parcela (en este caso sólo hay 10 parcelas). **Debe rellenarse un formulario diferente para cada cuadrícula** (dos formularios por parcela, marcando sólo un tipo de cebo en cada uno), lo cual permitirá recoger información ambiental de cada una.
+
+En cada parcela, una cuadrícula se compondrá de cebos de atún y otra de cebos de azúcar. Una cuadrícula no debe entremezclarse con la otra, y viceversa; para garantizarlo debe incluirse una franja vacía 3 metros o más entre ambas cuadrículas, tal como se muestra a continuación:
+
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;">
+atún
+</td>
+<td style="text-align:left;">
+atún
+</td>
+<td style="text-align:left;">
+atún
+</td>
+<td style="text-align:left;">
+atún
+</td>
+<td style="text-align:left;">
+separación de &gt;3 m
+</td>
+<td style="text-align:left;">
+azúcar
+</td>
+<td style="text-align:left;">
+azúcar
+</td>
+<td style="text-align:left;">
+azúcar
+</td>
+<td style="text-align:left;">
+azúcar
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+atún
+</td>
+<td style="text-align:left;">
+atún
+</td>
+<td style="text-align:left;">
+atún
+</td>
+<td style="text-align:left;">
+atún
+</td>
+<td style="text-align:left;">
+separación de &gt;3 m
+</td>
+<td style="text-align:left;">
+azúcar
+</td>
+<td style="text-align:left;">
+azúcar
+</td>
+<td style="text-align:left;">
+azúcar
+</td>
+<td style="text-align:left;">
+azúcar
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+atún
+</td>
+<td style="text-align:left;">
+atún
+</td>
+<td style="text-align:left;">
+atún
+</td>
+<td style="text-align:left;">
+atún
+</td>
+<td style="text-align:left;">
+separación de &gt;3 m
+</td>
+<td style="text-align:left;">
+azúcar
+</td>
+<td style="text-align:left;">
+azúcar
+</td>
+<td style="text-align:left;">
+azúcar
+</td>
+<td style="text-align:left;">
+azúcar
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+atún
+</td>
+<td style="text-align:left;">
+atún
+</td>
+<td style="text-align:left;">
+atún
+</td>
+<td style="text-align:left;">
+atún
+</td>
+<td style="text-align:left;">
+separación de &gt;3 m
+</td>
+<td style="text-align:left;">
+azúcar
+</td>
+<td style="text-align:left;">
+azúcar
+</td>
+<td style="text-align:left;">
+azúcar
+</td>
+<td style="text-align:left;">
+azúcar
+</td>
+</tr>
+</tbody>
+</table>
+ 
+
+La colocación de estaciones de cebo y colecta de hormigas seguiría el mismo procedimiento descrito arriba, con la siguiente particularidad: **las hormigas de los cebos de atún deben colectarse en un frasco, y las hormigas de los cebos de azúcar en otro**. Dado que cada cuadrícula tendrá su formulario particular y, por lo tanto, un código único que se elegirá en campo, recomiendo usar parejas de códigos como "H20190911M1ATUN" y "H20190911M1AZUCAR", o "P43ATUN" y "P43AZUCAR".
 
 ### Nidos
 
@@ -932,8 +1065,6 @@ Bibliografía de referencia brevemente comentada
     -   Kaspari, Alonso, & O’Donnellkwd&gt; (2000), relación entre tres factores energéticos y abundancia de hormigas.
     -   Tres interesantes trabajos sobre asociaciones planta-hormiga: Nelsen, Ree, & Moreau (2018), Schupp (1986) y Janzen (1966).
     -   Lapolla & Barden (2018), un interesante hallazgo sobre fósil de hormiga en areniscas.
-
-NO OLVIDAR: DOSEL SOBRE SUELO ESTRICTAMENTE, Y EN EL CASO DE ENRIQUE LO IMPORTANTE ES LA DISTANCIA A ÁREAS DE COMIDAS
 
 Referencias
 -----------
