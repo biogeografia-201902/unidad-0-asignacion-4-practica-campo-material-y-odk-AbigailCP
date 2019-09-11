@@ -297,7 +297,7 @@ Pasados 30 minutos, **colecta las hormigas de los 16 cebos de una misma parcela 
 
 Puedes elegir una convención para decidir cuánto colectar en cada cebo: por ejemplo, 5 minutos colectando o hasta que reúnas todos los morfotipos que puedas distinguir a simple vista. Una luz frontal puede servirte en lugares desafiantes, como por ejemplo, en áreas con grama o bajo dosel (poca luz).
 
-Al finalizar de colectar las hormigas, tapa el frasco y etiquétalo. Inserta una etiqueta en papel vegetal escrita con chinógrafo en el frasco; es preferible que escribas la etiqueta interna en papel libre ácidos, pero en todo caso el papel vegetal hará el trabajo. Adicionalmente, pega una etiqueta escrita en *masking tape* por fuera del frasco. Ambas etiquetas deben contener la misma información: **código de colecta** que anotaste en el formulario de ODK (por ejemplo "H20190911m1", o "p23m1"; **el campo es libre, pero el código debe ser único**), fecha y hora; si te cabe, añade referencia de lugar. Termina tu formulario de ODK, guárdalo y envíalo tan pronto te sea posible.
+Al finalizar de colectar las hormigas, tapa el frasco y etiquétalo. Inserta una etiqueta en papel vegetal escrita con chinógrafo en el frasco; es preferible que escribas la etiqueta interna en papel libre ácidos, pero en todo caso el papel vegetal hará el trabajo. Adicionalmente, pega una etiqueta escrita en *masking tape* por fuera del frasco. Ambas etiquetas deben contener la misma información: **código de colecta** que anotaste en el formulario de ODK (por ejemplo `H20190911m1`, o `p23`; **el campo es libre, pero el código debe ser único**), fecha y hora; si te cabe, añade referencia de lugar. Termina tu formulario de ODK, guárdalo y envíalo tan pronto te sea posible.
 
 Dado que tendrás que muestrear 11 parcelas, al finalizar todo tu trabajo de campo, deberás tener 11 formularios de campo y 11 frascos, es decir, un formulario y un frasco por parcela.
 
@@ -316,7 +316,7 @@ kable(diseno)
 ```
 &nbsp;
 
-La colocación de estaciones de cebo y colecta de hormigas seguiría el mismo procedimiento descrito arriba, con la siguiente particularidad: **las hormigas de los cebos de atún deben colectarse en un frasco, y las hormigas de los cebos de azúcar en otro**. Dado que cada cuadrícula tendrá su formulario particular y, por lo tanto, un código único que se elegirá en campo, recomiendo usar parejas de códigos como "H20190911M1ATUN" y "H20190911M1AZUCAR", o "P43ATUN" y "P43AZUCAR".
+La colocación de estaciones de cebo y colecta de hormigas seguiría el mismo procedimiento descrito arriba, con la siguiente particularidad: **las hormigas de los cebos de atún deben colectarse en un frasco, y las hormigas de los cebos de azúcar en otro**. Dado que cada cuadrícula tendrá su formulario particular y, por lo tanto, un código único que se elegirá en campo, recomiendo usar parejas de códigos como `H20190911M1ATUN` y `H20190911M1AZUCAR`, o `P43ATUN` y `P43AZUCAR`.
 
 ### Nidos
 
@@ -328,7 +328,7 @@ Deberás tomar las coordenadas de cada nido, una mínima información ambiental,
 
 **Colecta los individuos de un mismo nido en un único frasco con alcohol al 70-80% usando el pincel**. Una luz frontal puede servirte en lugares desafiantes, como por ejemplo, en áreas con grama o bajo dosel (poca luz)
 
-Al finalizar de colectar las hormigas, tapa el frasco y etiquétalo. Inserta una etiqueta en papel vegetal escrita con chinógrafo en el frasco; es preferible que escribas la etiqueta interna en papel libre ácidos, pero en todo caso el papel vegetal hará el trabajo. Adicionalmente, pega una etiqueta escrita en *masking tape* por fuera del frasco. Ambas etiquetas deben contener la misma información: código de colecta (en tu caso es p#m#, ejemplo: p1m1) que anotaste en el formulario de ODK, fecha y hora; si te cabe, añade referencia de lugar. Termina tu formulario de ODK, guárdalo y envíalo tan pronto te sea posible.
+Al finalizar de colectar las hormigas, tapa el frasco y etiquétalo. Inserta una etiqueta en papel vegetal escrita con chinógrafo en el frasco; es preferible que escribas la etiqueta interna en papel libre ácidos, pero en todo caso el papel vegetal hará el trabajo. Adicionalmente, pega una etiqueta escrita en *masking tape* por fuera del frasco. Ambas etiquetas deben contener la misma información: código de colecta (en tu caso podría ser `p#m#`, ejemplo: `p1m1`; **el campo es libre, pero el código debe ser único**) que anotaste en el formulario de ODK, fecha y hora; si te cabe, añade referencia de lugar. Termina tu formulario de ODK, guárdalo y envíalo tan pronto te sea posible.
 
 Dado que tendrás que censar todos los nidos, al finalizar todo tu trabajo de campo, tendrás tantos frascos y formularios de ODK como nidos hayas censado.
 
